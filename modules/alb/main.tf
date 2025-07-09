@@ -84,14 +84,6 @@ resource "aws_lb_target_group_attachment" "default" {
   port             = 80
 }
 
-# Attach EC2 instances to default target group (for path "/")
-resource "aws_lb_target_group_attachment" "default" {
-  count            = length(var.instance_ids)
-  target_group_arn = aws_lb_target_group.default.arn
-  target_id        = var.instance_ids[count.index]
-  port             = 80
-}
-
 resource "aws_lb_target_group_attachment" "images" {
   count            = length(var.instance_ids)
   target_group_arn = aws_lb_target_group.images.arn
