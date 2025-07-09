@@ -25,7 +25,7 @@ module "alb" {
   source         = "../modules/alb"
   name           = "myapp-alb"
   vpc_id         =  module.vpc.vpc_id
-  public_subnets = var.public_subnets
+  public_subnets = module.vpc.public_subnet_ids
   alb_sg_id      = module.security_group.alb_sg_id
   instance_ids   = module.ec2.instance_ids
 }
