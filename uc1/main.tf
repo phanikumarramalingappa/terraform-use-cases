@@ -1,6 +1,6 @@
 module "ec2" {
     source = "../modules/ec2"
-    security_group_ids  = [module.sg.sg_id]
+    security_group  = [module.sg.sg_id]
 }
 
 module "sg" {
