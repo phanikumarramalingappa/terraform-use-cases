@@ -6,6 +6,11 @@ resource "aws_instance" "ec2"{
      ami = var.ami_id
     instance_type = "t2.micro"
     vpc_security_group_ids = [aws_security_group.security_group.id]
+    
+tags = {
+    Name = var.instance_name
+  }
+
     user_data = <<EOF
     
 #!/bin/bash
