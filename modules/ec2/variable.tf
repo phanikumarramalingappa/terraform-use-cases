@@ -7,8 +7,3 @@ variable "vpc_id" {
   description = "VPC ID"
   type        = string
 }
-
-
-variable "instance_name" {
-  type = string
-}
