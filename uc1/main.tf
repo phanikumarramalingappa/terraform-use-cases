@@ -1,7 +1,7 @@
 module "ec2" {
   source = "../modules/ec2"
   count = length(var.public_subnets)
-  subnet_id = var,public_subnets[count.index]
+  subnet_id = var.public_subnets[count.index]
   ami_id = var.ami_id
   vpc_id = module.vpc.vpc_id
   sg_id = module.security_group.sg_id
