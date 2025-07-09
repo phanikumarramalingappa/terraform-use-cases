@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "ec2"{
-    ami_id = var.ami_id
+     ami = var.ami_id
     instance_type = "t2.micro"
     vpc_security_group_ids = [aws_security_group.security_group.id]
     user_data = <<EOF
@@ -22,10 +22,6 @@ systemctl enable httpd
 # Create a simple HTML file
 echo "<html><body><h1>Hello from EC2!</h1></body></html>" > /var/www/html/index.html
 EOF
-
-tags {
-    Name = "Instance A"
-}
 }
 
 resource "aws_security_group" "security_group" {
