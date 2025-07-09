@@ -1,6 +1,6 @@
 module "ec2" {
     source = "../modules/ec2"
-    vpc_security_group_ids = [module.sg.sg_id]
+    security_group_ids  = [module.sg.sg_id]
 }
 
 module "sg" {
