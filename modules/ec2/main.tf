@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "ec2"{
-    ami = var.ami_id
+    ami_id = var.ami_id
     instance_type = "t2.micro"
     vpc_security_group_ids = [aws_security_group.security_group.id]
     user_data = <<EOF
