@@ -1,6 +1,6 @@
-variable "name" {
-  description = "Name prefix for resources"
-  type        = string
+variable "vpc_name" {
+    description = "VPC name"
+    type        = string
 }
 
 variable "vpc_cidr" {
@@ -22,9 +22,4 @@ variable "private_subnets" {
 variable "azs" {
   description = "List of availability zones"
   type        = list(string)
-}
-
-variable "vpc_name" {
-    description = "VPC name"
-    type        = string
 }

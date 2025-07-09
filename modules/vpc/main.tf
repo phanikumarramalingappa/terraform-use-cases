@@ -10,7 +10,7 @@ resource "aws_vpc" "main" {
 resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.main.id
   tags = {
-    Name = "${var.name}-igw"
+    Name = "${var.vpc_name}-igw"
   }
 }
 
@@ -21,7 +21,7 @@ resource "aws_subnet" "public" {
   availability_zone       = element(var.azs, count.index)
   map_public_ip_on_launch = true
   tags = {
-    Name = "${var.name}-public-${count.index}"
+    Name = "${var.vpc_name}-public-${count.index}"
   }
 }
 
@@ -31,7 +31,7 @@ resource "aws_subnet" "private" {
   cidr_block        = var.private_subnets[count.index]
   availability_zone = element(var.azs, count.index)
   tags = {
-    Name = "${var.name}-private-${count.index}"
+    Name = "${var.vpc_name}-private-${count.index}"
   }
 }
 
@@ -42,7 +42,7 @@ resource "aws_route_table" "public" {
     gateway_id = aws_internet_gateway.igw.id
   }
   tags = {
-    Name = "${var.name}-public-rt"
+    Name = "${var.vpc_name}-public-rt"
   }
 }
 
