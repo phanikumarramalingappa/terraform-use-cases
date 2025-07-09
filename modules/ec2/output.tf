@@ -1,7 +1,3 @@
 output "instance_ids" {
-    value = [
-        aws_instance.ec2.id,
-        aws_instance.ec2-1.id,
-        aws_instance.ec2-2.id
-    ]
+    value = [for instance in aws_instance.ec2 : instance.id]
 }
