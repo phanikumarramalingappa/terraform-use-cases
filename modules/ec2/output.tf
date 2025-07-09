@@ -1,7 +1,7 @@
 output "instance_ids" {
     value = [
-        aws_instance.instance_a.id,
-        aws_instance.instance_b.id,
-        aws_instance.instance_c.id
+        aws_instance.ec2.id,
+        aws_instance.ec2-1.id,
+        aws_instance.ec2-2.id
     ]
 }
