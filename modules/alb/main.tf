@@ -78,22 +78,19 @@ resource "aws_lb_listener_rule" "register" {
 }
 
 resource "aws_lb_target_group_attachment" "default" {
-  count            = length(var.instance_ids)
   target_group_arn = aws_lb_target_group.default.arn
-  target_id        = var.instance_ids[count.index]
+  target_id        = var.instance_ids[0]
   port             = 80
 }
 
 resource "aws_lb_target_group_attachment" "images" {
-  count            = length(var.instance_ids)
   target_group_arn = aws_lb_target_group.images.arn
-  target_id        = var.instance_ids[count.index]
+  target_id        = var.instance_ids[1]
   port             = 80
 }
 
 resource "aws_lb_target_group_attachment" "register" {
-  count            = length(var.instance_ids)
   target_group_arn = aws_lb_target_group.register.arn
-  target_id        = var.instance_ids[count.index]
+  target_id        = var.instance_ids[2]
   port             = 80
 }
