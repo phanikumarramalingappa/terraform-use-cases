@@ -28,9 +28,9 @@ tags {
 }
 }
 
-resource "aws_security_group" "ec2_security_groupsg" {
+resource "aws_security_group" "security_group" {
   name        = "uc1-sg"
-  description = "Allow HTTP traffic only from laod balancer"
+  description = "Allow HTTP traffic only from ALB"
   vpc_id      = var.vpc_id
 
   ingress {
