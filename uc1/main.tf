@@ -1,8 +1,8 @@
 module "ec2" {
-  source = "../modules/ec2"
-  ami_id = var.ami_id
-  vpc_id = module.vpc.vpc_id
-  sg_id = module.security_group.sg_id
+  source         = "../modules/ec2"
+  ami_id         = var.ami_id
+  vpc_id         = module.vpc.vpc_id
+  sg_id          = module.security_group.sg_id
   public_subnets = module.vpc.public_subnet_ids
 }
 
