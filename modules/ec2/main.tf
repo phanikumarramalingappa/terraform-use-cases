@@ -9,6 +9,6 @@ resource "aws_instance" "ec2"{
     subnet_id = var.public_subnets[count.index]
     vpc_security_group_ids = [var.sg_id]
     tags = {
-      Name = "Instance A"
+      Name = "Instance-${count.index}"
     }
 }
