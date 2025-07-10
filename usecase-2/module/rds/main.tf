@@ -12,3 +12,9 @@ publicly_accessible=false
 multi_az=var.multi_az
 tags=var.tags
 }
+
+resource "aws_db_subnet_group" "rds_subnet_group"{
+    name = var.db_subnet_group_name
+    description = "RDS private subnet group"
+    subnet_ids = var.private_subnet_ids
+}
