@@ -31,6 +31,6 @@ variable "vpc_name" {
 }
 
 variable "db_password" {
-  type = string
+  type        = string
   description = "DB password"
 }
