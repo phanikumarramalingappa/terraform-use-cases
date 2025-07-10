@@ -3,3 +3,4 @@
 .terraform/
  uc1/*
 *.tfstate
+*.tfstate.backup
