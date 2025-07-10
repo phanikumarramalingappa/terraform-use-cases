@@ -9,6 +9,7 @@ yum install httpd -y
 systemctl start httpd
 systemctl enable httpd
 
+mkdir /var/www/html/register
 # Create a simple HTML page
 cat <<EOF > /var/www/html/register/index.html
 <!DOCTYPE html>

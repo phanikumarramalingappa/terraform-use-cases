@@ -21,7 +21,7 @@ resource "aws_security_group" "security_group" {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
-    security_groups = ["0.0.0.0/0"]
+    cidr_blocks = ["0.0.0.0/0"]
   }
 }
 
