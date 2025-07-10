@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
   
 jobs:
-  terrform-uc2:
+  terraform-uc2:
     runs-on: ubuntu-latest
 
     defaults:
@@ -27,7 +27,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4.1.0
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-key-id: ${{ secrets.AWS_SECRET_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY_ID }}
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Create terraform.tfvars
