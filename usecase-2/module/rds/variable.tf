@@ -44,3 +44,15 @@ variable "tags" {
     description = "Tags"
     default = {}
 }
+
+variable "db_subnet_group_name" {
+    type = string
+}
+
+variable "private_subnet_ids" {
+    type = list(string)
+}
+
+variable "security_group_ids" {
+    type = list(string)
+}
