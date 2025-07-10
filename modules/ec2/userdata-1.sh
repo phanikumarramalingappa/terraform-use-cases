@@ -10,7 +10,7 @@ systemctl start httpd
 systemctl enable httpd
 
 # Create a simple HTML page
-cat <<EOF > /var/www/html/index.html
+cat <<EOF > /var/www/html/iamges/index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +34,7 @@ cat <<EOF > /var/www/html/index.html
 </head>
 <body>
     <h1>Welcome to Your Amazon Linux Web Server!</h1>
-    <p>Page 2.</p>
+    <p>Page 2. Iamge</p>
 </body>
 </html>
 EOF
