@@ -8,7 +8,7 @@ resource "aws_instance" "ec2"{
     count = length(var.public_subnets)
     subnet_id = var.public_subnets[count.index]
     vpc_security_group_ids = [var.sg_id]
-    user_data = file(userdata-${count.index}.sh)
+    user_data = file("userdata-${count.index}.sh")
     tags = {
       Name = "Instance-${count.index}"
     }
