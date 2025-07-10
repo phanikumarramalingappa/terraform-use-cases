@@ -22,7 +22,7 @@ module "vpc" {
 
 
 module "rds" {
-  source = "./modules/rds"
+  source = "./module/rds"
 
   db_identifier         = "my-db-instance"
   db_engine             = "postgres"
