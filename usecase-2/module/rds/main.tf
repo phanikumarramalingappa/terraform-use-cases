@@ -3,6 +3,7 @@ identifier=var.db_identifier
 engine=var.db_engine
 instance_class= var.db_instance_class
 allocated_storage=var.db_allocated_storage
+name=var.name
 username=var.db_username
 password=var.db_password
 db_subnet_group_name=aws_db_subnet_group.rds_subnet_group.name
