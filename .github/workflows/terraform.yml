@@ -43,12 +43,11 @@ jobs:
           db_password     = "${{ secrets.UC2_DB_PASSWORD ))"
           db_engine       = "postgres"
           EOF
-          ls
 
       - name: Run implement terraform
         run: |
           terraform init
           terraform fmt
           terraform validate
-          terraform plan
-          terraform apply -auto-approve
+          terraform plan -var-file=terraform.tfvars
+          terraform apply -var-file=terraform.tfvars -auto-approve
