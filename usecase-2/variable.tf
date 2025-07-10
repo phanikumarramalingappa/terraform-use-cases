@@ -36,6 +36,6 @@ variable "db_password" {
 }
 
 variable "db_engine" {
-  type = string
+  type        = string
   description = "DB name"
 }
