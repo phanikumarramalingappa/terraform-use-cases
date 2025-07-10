@@ -30,11 +30,11 @@ variable "db_password" {
 
 variable "security_group_ids" {
     type = list(string)
-    description = 
+    description = "Security group ID's"
 }
 
 variable "multi_az" {
-    type = list(string)
+    type = boolean
     description = "Availability Zone's enable/disable"
     default = false
 }
