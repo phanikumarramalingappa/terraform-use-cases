@@ -28,6 +28,7 @@ module "rds" {
   db_instance_class    = "db.t3.micro"
   db_allocated_storage = 5
   db_username          = "arun"
+  db_name = "test"
   db_password          = var.db_password
   db_subnet_group_name = "my-db-subnet-group"
   private_subnet_ids   = module.vpc.private_subnet_ids
