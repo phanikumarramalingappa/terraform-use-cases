@@ -22,8 +22,7 @@ module "vpc" {
 
 
 module "rds" {
-  source = "./module/rds"
-
+  source = "./module/rds"
   db_identifier         = "my-db-instance"
   db_engine             = "postgres"
   db_instance_class     = "db.t3.micro"
