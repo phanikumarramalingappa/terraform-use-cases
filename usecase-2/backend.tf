@@ -3,7 +3,5 @@ terraform {
         bucket = "terraform-usecases-batch6"
         key = "usecase2/terraform.tfstate"
         region = "eu-west-1"
-        dynamodb_table = "terraform-locks"
-        encrypt = true
     }
 }
