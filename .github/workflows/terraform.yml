@@ -39,7 +39,7 @@ jobs:
           azs             = ["eu-west-1a", "eu-west-1b"]
           region          = "eu-west-1"
           vpc_name        = "Custom-VPC"
-          db_password     = "${{ secrets.UC2_DB_PASSWORD ))"
+          db_password     = "${{ secrets.UC2_DB_PASSWORD }}"
           db_engine       = "postgres"
           EOF
 
