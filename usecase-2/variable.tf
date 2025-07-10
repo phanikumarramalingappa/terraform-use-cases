@@ -35,8 +35,7 @@ variable "db_password" {
   description = "DB password"
 }
 
-variable "db_engine"
-{
+variable "db_engine" {
   type = string
   description = "DB name"
 }
