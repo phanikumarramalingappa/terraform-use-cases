@@ -34,7 +34,7 @@ variable "security_group_ids" {
 }
 
 variable "multi_az" {
-    type = boolean
+    type = string
     description = "Availability Zone's enable/disable"
     default = false
 }
