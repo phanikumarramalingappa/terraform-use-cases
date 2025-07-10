@@ -29,3 +29,8 @@ variable "vpc_name" {
   description = "VPC name"
   type        = string
 }
+
+variable "db_password" {
+  type = string
+  description = "DB password"
+}

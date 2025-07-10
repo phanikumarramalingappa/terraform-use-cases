@@ -19,3 +19,23 @@ module "vpc" {
   private_subnets = var.private_subnets
   azs             = var.azs
 }
+
+
+module "rds" {
+  source = "./modules/rds"
+
+  db_identifier         = "my-db-instance"
+  db_engine             = "postgres"
+  db_instance_class     = "db.t3.micro"
+  db_allocated_storage  = 5
+  db_username           = "admin"
+  db_password           = var.db_password
+  db_subnet_group_name  = "my-db-subnet-group"
+  private_subnet_ids    = module.vpc.private_subnet_ids
+  security_group_ids    = module.security_group.rds_sg_id
+  multi_az              = false
+  tags = {
+    Environment = "test"
+    Project     = "my-project"
+  }
+}

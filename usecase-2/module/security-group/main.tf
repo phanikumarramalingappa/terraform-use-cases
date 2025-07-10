@@ -24,3 +24,26 @@ resource "aws_security_group" "security_group" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+
+
+
+resource "aws_security_group" "rds_security_group" {
+  name        = "uc2-rds-sg"
+  description = "Allow HTTP traffic only from ALB"
+  vpc_id      = var.vpc_id
+
+  ingress {
+    from_port   = 5432
+    to_port     = 5432
+    protocol    = "tcp"
+    security_group_id = aws_security_group.rds_subnet_group.id
+    source_security_group_id = module.security_group.sg_id
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
