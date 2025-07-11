@@ -20,5 +20,5 @@ variable "alb_sg_id" {
 
 variable "instance_ids" {
   description = "List of EC2 instance IDs to attach to the target group"
-  type        = list(string)
+  type        = string
 }
