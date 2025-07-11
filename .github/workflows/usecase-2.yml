@@ -29,22 +29,19 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY_ID }}
           aws-region: ${{ secrets.AWS_REGION }}
 
-      # - name: Create terraform.tfvars
-      #   run: |
-      #     cat <<EOF > terraform.tfvars
-      #     ami_id          = "ami-0803576f0c0169402"
-      #     vpc_cidr        = "10.0.0.0/16"
-      #     public_subnets  = ["10.0.11.0/24", "10.0.12.0/24"]
-      #     private_subnets = ["10.0.21.0/24", "10.0.22.0/24"]
-      #     azs             = ["eu-west-1a", "eu-west-1b"]
-      #     region          = "eu-west-1"
-      #     vpc_name        = "Custom-VPC"
-      #     db_password     = "${{ secrets.UC2_DB_PASSWORD }}"
-      #     db_engine       = "postgres"
-      #     EOF
-
-      - name: Copy terraform.tfvars from S3
-        run: aws s3 cp s3://terraform-usecases-batch6/usecase2/terraform.tfvars ./terraform.tfvars
+      - name: Create terraform.tfvars
+        run: |
+          cat <<EOF > terraform.tfvars
+          ami_id          = "ami-0803576f0c0169402"
+          vpc_cidr        = "10.0.0.0/16"
+          public_subnets  = ["10.0.11.0/24", "10.0.12.0/24"]
+          private_subnets = ["10.0.21.0/24", "10.0.22.0/24"]
+          azs             = ["eu-west-1a", "eu-west-1b"]
+          region          = "eu-west-1"
+          vpc_name        = "Custom-VPC"
+          db_password     = "${{ secrets.UC2_DB_PASSWORD }}"
+          db_engine       = "postgres"
+          EOF
 
       - name: Run implement terraform
         run: |
