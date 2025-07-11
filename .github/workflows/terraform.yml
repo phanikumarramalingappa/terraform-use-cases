@@ -5,7 +5,7 @@ on:
     paths:
       - 'usecase-2/**'
       - '.github/workflows/terraform.yml'
-    branches: test
+    branches: main
   
 jobs:
   terraform-uc2:
