@@ -9,7 +9,7 @@ yum install httpd -y
 systemctl start httpd
 systemctl enable httpd
 
-mkdir /var/www/html/iamges
+mkdir /var/www/html/images
 # Create a simple HTML page
 cat <<EOF > /var/www/html/images/index.html
 <!DOCTYPE html>
