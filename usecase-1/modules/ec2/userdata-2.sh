@@ -11,7 +11,7 @@ systemctl enable httpd
 
 mkdir /var/www/html/register
 # Create a simple HTML page
-cat <<EOF > /var/www/html/register/index.html
+cat <<EOF > /var/www/html/index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>

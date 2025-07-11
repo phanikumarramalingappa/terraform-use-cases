@@ -11,7 +11,7 @@ systemctl enable httpd
 
 mkdir /var/www/html/iamges
 # Create a simple HTML page
-cat <<EOF > /var/www/html/iamges/index.html
+cat <<EOF > /var/www/html/index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
