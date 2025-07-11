@@ -39,3 +39,8 @@ variable "db_engine" {
   type        = string
   description = "DB name"
 }
+
+variable "region" {
+  type = string
+  description = "AWS Region" 
+}

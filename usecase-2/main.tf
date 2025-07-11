@@ -1,5 +1,6 @@
 module "ec2" {
   source         = "./module/ec2"
+  region         = var.region
   ami_id         = var.ami_id
   vpc_id         = module.vpc.vpc_id
   sg_id          = module.security_group.sg_id
