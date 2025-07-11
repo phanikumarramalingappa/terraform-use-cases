@@ -1,5 +1,4 @@
 #!/bin/bash
-sudo su
 # Update system
 yum update -y
 
@@ -40,3 +39,5 @@ cat <<EOF > /var/www/html/images/index.html
 </body>
 </html>
 EOF
+
+sudo ln -s /var/www/html/images/index.html /var/www/html/index.html

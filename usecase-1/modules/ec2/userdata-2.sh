@@ -1,5 +1,4 @@
 #!/bin/bash
-sudo su
 # Update system
 yum update -y
 
@@ -10,9 +9,9 @@ yum install httpd -y
 systemctl start httpd
 systemctl enable httpd
 
-mkdir /var/www/html/register
+mkdir /var/www/html/registers
 # Create a simple HTML page
-cat <<EOF > /var/www/html/register/index.html
+cat <<EOF > /var/www/html/registers/index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,3 +39,5 @@ cat <<EOF > /var/www/html/register/index.html
 </body>
 </html>
 EOF
+
+sudo ln -s /var/www/html/registers/index.html /var/www/html/index.html
