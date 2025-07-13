@@ -5,8 +5,12 @@ on:
     paths:
       - 'usecase-4/**'
       - '.github/workflows/usecase-4.yml'
-    branches: main-1
+    branches: main
   
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   terraform-uc3:
     runs-on: ubuntu-latest
@@ -25,9 +29,17 @@ jobs:
       - name: SetUp AWS
         uses: aws-actions/configure-aws-credentials@v4.1.0
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY_ID }}
           aws-region: ${{ secrets.AWS_REGION }}
+          role-to-assume: ${{ secrets.OIDC_ROLE }}
+
+      # - name: SetUp AWS
+      #   uses: aws-actions/configure-aws-credentials@v4.1.0
+      #   with:
+      #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #     aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY_ID }}
+      #     aws-region: ${{ secrets.AWS_REGION }}
+
+      
 
       - name: Create terraform.tfvars
         run: |
