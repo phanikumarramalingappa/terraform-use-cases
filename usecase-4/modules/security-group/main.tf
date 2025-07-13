@@ -7,6 +7,7 @@ resource "aws_security_group" "security_group" {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
+    security_group_id = aws_security_group.security_group.id
     source_security_group_id = aws_security_group.alb_security_group.id
   }
 
