@@ -1,3 +1,3 @@
 output "alb_dns" {
-    value = modules.alb.dns_name
+    value = module.alb.dns_name
 }
