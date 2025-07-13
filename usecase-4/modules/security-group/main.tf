@@ -7,7 +7,7 @@ resource "aws_security_group" "security_group" {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    source_security_group_ids = aws_security_group.alb_security_group.id
+    source_security_group_id = aws_security_group.alb_security_group.id
   }
 
   ingress {
