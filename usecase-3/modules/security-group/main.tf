@@ -7,7 +7,7 @@ resource "aws_security_group" "security_group" {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = aws_security_group.alb_security_group.id
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   ingress {
