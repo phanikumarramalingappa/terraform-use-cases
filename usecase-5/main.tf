@@ -18,7 +18,7 @@ module "s3_bucket" {
   
   enable_event_notification = true
   topic_arn = module.sns_topic.topic_arn
-  event_types =  ["s3:ObjectCreated:*"]
+  events =  ["s3:ObjectCreated:*"]
   bucket_depends_on = [module.sns_topic]
 }
 
