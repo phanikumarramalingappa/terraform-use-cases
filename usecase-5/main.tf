@@ -16,3 +16,15 @@ module "s3_bucket" {
   output_bucket_name = var.bucket_output_name
 }
 
+module "lambda" {
+  source     = "./modules/lambda"
+      s3_bucket   = var.lambda_s3_bucket
+      s3_key      = var.lambda_s3_key
+      name        = var.lambda_name
+      role        = var.lambda_role
+      handler     = "lambda.lambda_handler"
+      runtime     = "python3.9"
+      memory_size = 128
+      timeout     = 30
+      publish     = true
+}

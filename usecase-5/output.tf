@@ -9,3 +9,7 @@ output "s3_ibucket" {
 output "s3_obucket" {
     value = module.s3_bucket.o_bucket
 }
+
+output "" {
+  value = module.lambda.lambda_arn
+}
