@@ -17,7 +17,7 @@ variable "events" {
   default = ["s3:ObjectCreated:*"]
 }
 
-variable "depends_on" {
+variable "bucket_depends_on" {
   type = any
   default = []
 }

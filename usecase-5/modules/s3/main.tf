@@ -13,9 +13,7 @@ resource "aws_s3_bucket_notification" "s3_event_notification" {
   topic {
     topic_arn     = var.topic_arn
     events = var.events
-    filter_prefix = var.filter_prefix != "" ? var.filter_prefix : null
-    filter_suffix = var.filter_suffix != "" ? var.filter_suffix : null
   }
  
-  depends_on = [var.depends_on]
+  depends_on = [var.bucket_depends_on]
 }
