@@ -30,5 +30,5 @@ module "lambda" {
     publish     = true
   }
   s3_trigger_events = ["s3:ObjectCreated:*"]
-  s3_trigger_bucket = var.bucket_output_name
+  s3_trigger_bucket = var.bucket_input_name
 }
