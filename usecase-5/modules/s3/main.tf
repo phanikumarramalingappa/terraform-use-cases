@@ -1,5 +1,3 @@
-data "aws_caller_identity" "thi" {}
-
 resource "aws_s3_bucket" "s3_input_bucket" {
   bucket = var.input_bucket_name
 }
