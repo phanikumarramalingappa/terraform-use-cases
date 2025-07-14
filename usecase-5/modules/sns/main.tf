@@ -1,5 +1,5 @@
 resource "aws_sns_topic" "sns_notification" {
-  name = "image-resizing"
+  name = var.sns_topic_name
 }
 
 resource "aws_sns_topic_subscription" "subscribe" {
