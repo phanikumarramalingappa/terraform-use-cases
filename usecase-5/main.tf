@@ -12,7 +12,7 @@ module "sns_topic" {
 
 module "s3_bucket" {
   source         = "./modules/s3"
-  bucket_iname = var.bucket_input_name
-  bucket_oname = var.bucket_output_name
+  input_bucket_name = var.bucket_input_name
+  output_bucket_name = var.bucket_output_name
 }
 
