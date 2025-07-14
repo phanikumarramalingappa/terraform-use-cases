@@ -1,4 +1,4 @@
 variable "email" {
   type        = string
-  description = "Email for subscribing topic"
+  description = "E-mail for subscribing topic"
 }
