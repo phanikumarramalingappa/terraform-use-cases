@@ -22,7 +22,7 @@ resource "aws_s3_bucket_notification" "s3_trigger" {
   bucket = var.s3_trigger_bucket
   lambda_function {
     lambda_function_arn = aws_lambda_function.lambda.arn
-    event = var.s3_trigger_events
+    events = var.s3_trigger_events
   }
   depends_on = [aws_lambda_permission.allow_s3]
 }
