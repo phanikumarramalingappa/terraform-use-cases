@@ -4,7 +4,7 @@ provider "aws" {
 
 
 module "sns_topic" {
-  source = "./modules/sns"
+  source         = "./modules/sns"
   sns_topic_name = var.sns_topic_name
-  email = var.email
+  email          = var.email
 }

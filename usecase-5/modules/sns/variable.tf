@@ -4,6 +4,6 @@ variable "email" {
 }
 
 variable "sns_topic_name" {
-  type = string
+  type        = string
   description = "SNS topic name"
 }
