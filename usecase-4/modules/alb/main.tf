@@ -35,5 +35,5 @@ resource "aws_lb_listener" "http" {
 resource "aws_lb_target_group_attachment" "default" {
   target_group_arn = aws_lb_target_group.default.arn
   target_id        = var.instance_ids
-  port             = 80
+  port             = 4000
 }
