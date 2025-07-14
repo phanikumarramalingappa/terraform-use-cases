@@ -1,6 +1,6 @@
 variable "input_bucket_name" {
     type = string
-    description = "Input bukcet name"
+    description = "Input bucket name"
 }
 
 variable "output_bucket_name" {
