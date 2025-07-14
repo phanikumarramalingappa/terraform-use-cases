@@ -15,6 +15,7 @@ cd incubator-devlake
 cd backend
 cd ..
 cp env.example .env
+echo "ENCRYPTION_SECRET=password123" >> .env
 mv docker-compose-dev.yml compose.yml
 docker compose up -d
 docker ps
