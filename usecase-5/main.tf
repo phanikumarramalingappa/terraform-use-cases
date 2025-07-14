@@ -17,8 +17,8 @@ module "s3_bucket" {
 }
 
 module "lambda" {
+  source      = "./modules/lambda"
   lambda_function = {
-    source      = "./modules/lambda"
     s3_bucket   = var.lambda_s3_bucket
     s3_key      = var.lambda_s3_key
     name        = var.lambda_name
