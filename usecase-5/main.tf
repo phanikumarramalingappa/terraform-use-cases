@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "eu-west-1"
+  region = "us-east-1"
 }
 
 resource "aws_iam_role" "lambda_exec_role" {
@@ -29,8 +29,8 @@ resource "aws_lambda_function" "my_lambda" {
   handler       = "lambda_function.lambda_handler"  # Adjust based on your code
   runtime       = "python3.9"      # Or nodejs18.x, etc.
 
-  filename         = "${path.module}/lambda.zip"
-  source_code_hash = filebase64sha256("${path.module}/lambda/lambda.zip")
+  filename         = "lambda.zip"
+  source_code_hash = filebase64sha256(lambda.zip")
 
   timeout = 10
   memory_size = 128
