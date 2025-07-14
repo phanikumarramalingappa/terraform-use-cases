@@ -49,7 +49,7 @@ Service = "s3.amazonaws.com"
         Resource = "arn:aws:sns:us-east-1:${data.aws_caller_identity.this.account_id}:${var.sns_topic_name}",
         Condition = {
           ArnLike = {
-            "aws:SourceArn" = "arn:aws:s3:::${var.s3_bucket_name}"
+            "aws:SourceArn" = "arn:aws:s3:::${var.bucket_name}"
           }
         }
       }
