@@ -22,7 +22,7 @@ resource "aws_lb_target_group" "default" {
 # Listener
 resource "aws_lb_listener" "http" {
   load_balancer_arn = aws_lb.this.arn
-  port              = 4000
+  port              = 80
   protocol          = "HTTP"
 
   default_action {
@@ -35,5 +35,5 @@ resource "aws_lb_listener" "http" {
 resource "aws_lb_target_group_attachment" "default" {
   target_group_arn = aws_lb_target_group.default.arn
   target_id        = var.instance_ids
-  port             = 4000
+  port             = 80
 }
