@@ -14,6 +14,7 @@ module "sns_policy" {
   source         = "./modules/sns"
   sns_topic_name = module.sns_notification.name
   bucket_name = module.s3_bucket.output_bucket_name
+  email          = var.email
 }
 
 module "s3_bucket" {
