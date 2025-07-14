@@ -1,16 +1,6 @@
 resource "aws_sns_topic" "sns_notification" {
   name = var.sns_topic_name
-}
 
-resource "aws_sns_topic_subscription" "subscribe" {
-  topic_arn = aws_sns_topic.sns_notification.arn
-  protocol  = "email"
-  endpoint  = var.email
-}
-
-resource "aws_sns_topic_policy" "allow_s3_publish" {
-  arn = aws_sns_topic.sns_notification.arn
- 
   policy = jsonencode({
     Version = "2012-10-17",
     Id      = "__default_policy_ID",
@@ -54,4 +44,10 @@ Service = "s3.amazonaws.com"
       }
     ]
   })
+}
+
+resource "aws_sns_topic_subscription" "subscribe" {
+  topic_arn = aws_sns_topic.sns_notification.arn
+  protocol  = "email"
+  endpoint  = var.email
 }
