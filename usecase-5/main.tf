@@ -8,3 +8,11 @@ module "sns_topic" {
   sns_topic_name = var.sns_topic_name
   email          = var.email
 }
+
+
+module "s3_bucket" {
+  source         = "./modules/s3"
+  bucket_name = var.bucket_input_name
+  bucket_name = var.bucket_output_name
+}
+
