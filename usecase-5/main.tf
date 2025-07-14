@@ -6,7 +6,7 @@ provider "aws" {
 module "sns_topic" {
   source         = "./modules/sns"
   sns_topic_name = var.sns_topic_name
-  s3_bucket_name = var.bucket_output_name
+  bucket_name = var.bucket_output_name
   email          = var.email
 }
 
