@@ -29,5 +29,5 @@ module "lambda" {
     timeout     = 30
     publish     = true
   }
-  trigger_bucket = var.bucket_output_name
+  s3_trigger_bucket = var.bucket_output_name
 }
