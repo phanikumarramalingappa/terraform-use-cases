@@ -16,3 +16,8 @@ variable "s3_trigger_events" {
     type = list(string)
     description = "S3 event list"
 }
+
+variable "enable_s3_trigger" {
+    type = bool
+    default = false
+}

@@ -8,7 +8,21 @@ resource "aws_lambda_function" "lambda" {
   memory_size = 128
   timeout     = 30
   publish     = true
-  enable_s3_trigger = true
-  s3_trigger_bucket = var.trigger_bucket
-  s3_trigger_events = ["s3:ObjectCreated:*"]
+}
+
+resource "aws_lambda_permission" "allow_s3" {
+  statement_id = "AllowExecutionFromS3"
+  action = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.lambda.function_name
+  principal = "s3.amazonaws.com"
+  source_arn = "arn:aws:s3:::${var.s3_trigger_bucket}"
+}
+
+resource "aws_s3_bucket_notification" "s3_trigger" {
+  bucket = var.s3_trigger_bucket
+  lambda_function {
+    lambda_function_arn = aws_lambda_function.lambda.arn
+    event = var.s3_trigger_events
+  }
+  depends_on = [aws_lambda_permission.allow_s3]
 }
