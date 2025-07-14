@@ -29,4 +29,8 @@ module "lambda" {
     timeout     = 30
     publish     = true
   }
+
+  enable_s3_trigger = true
+  s3_trigger_bucket = var.bucket_output_name
+  s3_trigger_events = ["s3:ObjectCreated:*"]
 }
