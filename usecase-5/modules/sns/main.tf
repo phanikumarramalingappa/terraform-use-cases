@@ -1,4 +1,4 @@
-data "aws_caller_identity" "this" {}
+data "aws_caller_identity" "current" {}
 
 resource "aws_sns_topic" "sns_notification" {
   name = var.sns_topic_name
