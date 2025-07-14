@@ -7,7 +7,12 @@ variable "lambda_function" {
   })
 }
 
-variable "bucket_output_name"{
+variable "s3_trigger_bucket"{
     type = string
     description = "S3 bucket trigger bucket"
+}
+
+variable "s3_trigger_events" {
+    type = list(string)
+    description = "S3 event list"
 }
