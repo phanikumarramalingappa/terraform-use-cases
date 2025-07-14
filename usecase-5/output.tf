@@ -3,11 +3,11 @@ output "sns_arn" {
 }
 
 output "s3_ibucket" {
-    value = module.s3_bucket.i_bucket
+  value = module.s3_bucket.i_bucket
 }
 
 output "s3_obucket" {
-    value = module.s3_bucket.o_bucket
+  value = module.s3_bucket.o_bucket
 }
 
 output "lambda_arn" {
