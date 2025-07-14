@@ -30,7 +30,7 @@ resource "aws_lambda_function" "my_lambda" {
   runtime       = "python3.9"      # Or nodejs18.x, etc.
 
   filename         = "${path.module}/lambda.zip"
-  source_code_hash = filebase64sha256("${path.module}/lambda.zip")
+  source_code_hash = filebase64sha256("${path.module}/lambda/lambda.zip")
 
   timeout = 10
   memory_size = 128
