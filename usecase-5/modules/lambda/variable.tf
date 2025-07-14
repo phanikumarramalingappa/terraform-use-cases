@@ -6,3 +6,8 @@ variable "lambda_function" {
     role      = string
   })
 }
+
+variable "bucket_output_name"{
+    type = string
+    description = "S3 bucket trigger bucket"
+}

@@ -8,4 +8,7 @@ resource "aws_lambda_function" "lambda" {
   memory_size = 128
   timeout     = 30
   publish     = true
+  enable_s3_trigger = true
+  s3_trigger_bucket = var.trigger_bucket
+  s3_trigger_events = ["s3:ObjectCreated:*"]
 }
