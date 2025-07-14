@@ -10,6 +10,12 @@ module "sns_topic" {
 }
 
 
+module "sns_policy" {
+  source         = "./modules/sns"
+  sns_topic_name = module.sns_notification.name
+  bucket_name = module.s3_bucket.output_bucket_name
+}
+
 module "s3_bucket" {
   source             = "./modules/s3"
   input_bucket_name  = var.bucket_input_name
