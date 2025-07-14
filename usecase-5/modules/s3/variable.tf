@@ -19,6 +19,7 @@ variable "events" {
 
 variable "depends_on" {
   type = any
+  default = []
 }
 
 variable "enable_event_notification" {
