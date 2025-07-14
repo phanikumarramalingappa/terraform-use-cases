@@ -17,6 +17,7 @@ module "s3_bucket" {
 }
 
 module "lambda" {
+  lambda_function = {
   source      = "./modules/lambda"
   s3_bucket   = var.lambda_s3_bucket
   s3_key      = var.lambda_s3_key
@@ -27,4 +28,5 @@ module "lambda" {
   memory_size = 128
   timeout     = 30
   publish     = true
+  }
 }
