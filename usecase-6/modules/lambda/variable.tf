@@ -1,8 +1,8 @@
 variable "lambda_function" {
   type = object({
-    name      = string
+    start_name      = string
+    stop_name = string
     role      = string
-    lambda_path_file = string
   })
 }
 
