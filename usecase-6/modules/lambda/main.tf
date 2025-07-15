@@ -1,5 +1,5 @@
 data "archive_file" "zip" {
-  type = zip
+  type = "zip"
   source_file = "${path.module}/start_lambda.py"
   output_path = "${path.module}/function.zip"
 }
