@@ -17,6 +17,7 @@ module "start_ec2_schedule" {
   schedule_expression = "cron(0 9 * * ? *)"
   lambda_arn          = module.lambda.start_lambda_function_arn
   lambda_name         = module.lambda.start_lambda_function_name
+  scheduler_role_arn = var.scheduler_role_arn
 }
 
 module "stop_ec2_schedule" {
@@ -26,5 +27,6 @@ module "stop_ec2_schedule" {
   schedule_expression = "cron(0 18 * * ? *)"
   lambda_arn          = module.lambda.stop_lambda_function_arn
   lambda_name         = module.lambda.stop_lambda_function_name
+  scheduler_role_arn = var.scheduler_role_arn
 }
 

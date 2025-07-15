@@ -1,11 +1,24 @@
-resource "aws_cloudwatch_event_rule" "schedule" {
-    name = var.name
-    schedule_expression = var.schedule_expression
-    description = var.description
-}
-
-resource "aws_cloudwatch_event_target" "lambda" {
-    rule = aws_cloudwatch_event_rule.schedule.name
-    target_id = var.lambda_name
-    arn = var.lambda_arn
+resource "aws_scheduler_schedule" "lambda_trigger" {
+name = var.name
+  description = var.description
+  group_name  = "default"
+ 
+  flexible_time_window {
+    mode = "OFF"
+  }
+ 
+  schedule_expression = var.schedule_expression
+  schedule_expression_timezone = "Asia/Kolkata"
+ 
+  target {
+    arn      = var.lambda_arn
+    role_arn = var.scheduler_role_arn
+    input = jsonencode({ trigger = var.name })
+    
+    retry_policy {
+      maximum_retry_attempts = 2
+    }
+  }
+ 
+  state = "ENABLED"
 }

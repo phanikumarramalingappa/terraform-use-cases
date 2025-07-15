@@ -17,3 +17,7 @@ variable "lambda_name" {
 variable "lambda_arn" {
 
 }
+
+variable "scheduler_role_arn" {
+    
+}

@@ -15,3 +15,7 @@ variable "instance_id" {
 variable "region" {
     type = string
 }
+
+variable "scheduler_role_arn" {
+  type = string
+}
