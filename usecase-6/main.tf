@@ -14,4 +14,6 @@ module "lambda" {
       region      = var.region
     }
   }
+  instance_id = var.instance_id
+  region      = var.region
 }
