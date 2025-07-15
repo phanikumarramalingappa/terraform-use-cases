@@ -37,8 +37,3 @@ variable "lambda_role" {
   type        = string
   description = "Lambda IAM role arn"
 }
-
-variable "region" {
-  type = string
-  description = "AWS region"
-}
