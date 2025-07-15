@@ -7,7 +7,7 @@ resource "aws_lambda_function" "lambda" {
   timeout     = 30
   publish     = true
   environment_variables = {
-    variable {
+    variable = {
       instance_id = var.instance_id
       region      = var.region
     }
