@@ -4,7 +4,7 @@ locals {
       name                = "start-lambda"
       role                = var.lambda_role
       handler             = "start_lambda.lambda_handler"
-      lambda_path_file = "${path.module}/start_lambda.py"
+      lambda_path_file = "${path.root}/start_lambda.py"
       runtime             = "python3.9"
       memory_size         = 128
       timeout             = 15
@@ -18,7 +18,7 @@ locals {
       name                = "stop-lambda"
       role                = var.lambda_role
       handler             = "stop_lambda.lambda_handler"
-      lambda_path_file = "${path.module}/stop_lambda.py"
+      lambda_path_file = "${path.root}/stop_lambda.py"
       runtime             = "python3.9"
       memory_size         = 128
       timeout             = 15
