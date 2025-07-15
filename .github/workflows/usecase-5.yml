@@ -60,6 +60,12 @@ jobs:
       - name: Run TFLint
         run: tflint -f compact
 
+      - name: Setup Python for Checkov
+        uses: actions/setup-python@v5.6.0
+
+      - name: Install Checkov
+        run: pip install checkov
+
       - name: Run Checkon Scan
         run: checkov -d . --framework terraform --soft-fail  --output json > checkov_result.json
 
