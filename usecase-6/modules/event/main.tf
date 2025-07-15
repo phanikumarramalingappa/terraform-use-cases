@@ -13,11 +13,6 @@ name = var.name
   target {
     arn      = var.lambda_arn
     role_arn = var.scheduler_role_arn
-    input = jsonencode({ trigger = var.name })
-    
-    retry_policy {
-      maximum_retry_attempts = 2
-    }
   }
  
   state = "ENABLED"
