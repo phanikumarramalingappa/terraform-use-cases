@@ -5,7 +5,7 @@ on:
     paths:
       - 'usecase-5/**'
       - '.github/workflows/usecase-5.yml'
-    branches: main
+    branches: main-1
   
 permissions:
   id-token: write
@@ -35,13 +35,14 @@ jobs:
       - name: Create terraform.tfvars
         run: |
           cat <<EOF > terraform.tfvars
-          ami_id          = "ami-0803576f0c0169402"
-          vpc_cidr        = "10.0.0.0/16"
-          public_subnets  = ["10.0.11.0/24", "10.0.12.0/24"]
-          private_subnets = ["10.0.21.0/24", "10.0.22.0/24"]
-          azs             = ["eu-west-1a", "eu-west-1b"]
-          region          = "eu-west-1"
-          vpc_name        = "Custom-VPC"
+          sns_topic_name     = "s3-sns-topic"
+          email              = ${{ secrets.EMAIL }}
+          bucket_input_name  = "input-image-non-resize-1"
+          bucket_output_name = "output-image-resize-uc5-1"
+          lambda_s3_bucket   = "layer-908023"
+          lambda_s3_key      = "lambda.zip"
+          lambda_name        = "image-resize-lambda-function"
+          lambda_role        = ${{ secrets.LAMBDA_ROLE }}
           EOF
 
       - name: Setup TFLint
