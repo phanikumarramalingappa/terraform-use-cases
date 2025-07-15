@@ -9,10 +9,10 @@ on:
   
 permissions:
   id-token: write
-  contents: read
+  contents: write
 
 jobs:
-  terraform-uc3:
+  terraform-uc5:
     runs-on: ubuntu-latest
 
     defaults:
@@ -82,6 +82,11 @@ jobs:
           output-file: README.md
           output-method: inject
           git-push: "true"
+          git-commit-message: "Updated latest terraform document"
+          git-commit-author: "Github Actions <actions@github.com>"
+          git-commit-email: "actions@github.com"
+          git-branch: main
+          github-token: ${{ secrets.GIT_TOKEN }} 
 
       - name: Run implement terraform
         run: |
