@@ -1,11 +1,11 @@
-name: Terraform Github
+name: Terraform Github Use Case 3
 
 on:
   push:
     paths:
       - 'usecase-3/**'
       - '.github/workflows/usecase-3.yml'
-    branches: main
+    branches: main-1
   
 jobs:
   terraform-uc3:
