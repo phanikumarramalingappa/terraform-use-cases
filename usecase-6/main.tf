@@ -3,7 +3,7 @@ module "lambda" {
   lambda_function = {
     name        = var.lambda_name
     role        = var.lambda_role
-    handler     = "lambda_function.lambda_handler"
+    handler     = "start_lambda.lambda_handler"
     lambda_path_file = "${path.module}/start_lambda.py"
     runtime     = "python3.9"
     memory_size = 128
