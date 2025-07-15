@@ -33,16 +33,17 @@ jobs:
           role-to-assume: ${{ secrets.OIDC_ROLE }}
 
       - name: Create terraform.tfvars
+        env:
+          TF_VAR_email : ${{ secrets.EMAIL }}
+          TF_VAR_lambda_role : ${{ secrets.LAMBDA_ROLE }}
         run: |
           cat <<EOF > terraform.tfvars
           sns_topic_name = "s3-sns-topic"
-          email = ${{ secrets.EMAIL }}
           bucket_input_name = "input-image-non-resize-1"
           bucket_output_name = "output-image-resize-uc5-1"
           lambda_s3_bucket = "layer-908023"
           lambda_s3_key = "lambda.zip"
           lambda_name = "image-resize-lambda-function"
-          lambda_role = ${{ secrets.LAMBDA_ROLE }}
           EOF
 
       - name: Setup TFLint
