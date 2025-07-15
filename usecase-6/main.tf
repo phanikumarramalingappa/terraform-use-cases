@@ -15,8 +15,8 @@ module "start_ec2_schedule" {
   name                = "start-ec2-schedule"
   description         = "Trigger Lambda to start EC2"
   schedule_expression = "cron(0 9 * * ? *)"
-  lambda_arn          = module.start_lambda.start_lambda_function_arn
-  lambda_name         = module.start_lambda.start_lambda_function_name
+  lambda_arn          = module.lambda.start_lambda_function_arn
+  lambda_name         = module.lambda.start_lambda_function_name
 }
 
 module "stop_ec2_schedule" {
