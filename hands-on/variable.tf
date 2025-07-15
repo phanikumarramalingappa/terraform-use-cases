@@ -31,6 +31,6 @@ variable "vpc_name" {
 }
 
 variable "region" {
-  type = string
-  description = "AWS Region" 
+  type        = string
+  description = "AWS Region"
 }

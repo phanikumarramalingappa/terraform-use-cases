@@ -1,6 +1,6 @@
 variable "vpc_name" {
-    description = "VPC name"
-    type        = string
+  description = "VPC name"
+  type        = string
 }
 
 variable "vpc_cidr" {

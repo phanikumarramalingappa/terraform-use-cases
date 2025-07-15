@@ -9,6 +9,6 @@ variable "sns_topic_name" {
 }
 
 variable "bucket_name" {
-  type = string
+  type        = string
   description = "bucket name to attach sns"
 }

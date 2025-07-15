@@ -9,11 +9,11 @@ resource "aws_s3_bucket" "s3_output_bucket" {
 
 resource "aws_s3_bucket_notification" "s3_event_notification" {
   bucket = aws_s3_bucket.s3_output_bucket.id
- 
+
   topic {
-    topic_arn     = var.topic_arn
-    events = var.events
+    topic_arn = var.topic_arn
+    events    = var.events
   }
- 
+
   depends_on = [var.bucket_depends_on]
 }

@@ -10,10 +10,10 @@ variable "vpc_id" {
 
 variable "sg_id" {
   description = "Security group ID"
-  type = string
+  type        = string
 }
 
 variable "public_subnets" {
   description = "Public subnet ID's "
-  type = list(any)
+  type        = list(any)
 }

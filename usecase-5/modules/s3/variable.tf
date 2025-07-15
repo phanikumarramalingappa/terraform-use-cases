@@ -13,16 +13,16 @@ variable "topic_arn" {
 }
 
 variable "events" {
-  type = list(string)
+  type    = list(string)
   default = ["s3:ObjectCreated:*"]
 }
 
 variable "bucket_depends_on" {
-  type = any
+  type    = any
   default = []
 }
 
 variable "enable_event_notification" {
-  type = bool
+  type    = bool
   default = false
 }

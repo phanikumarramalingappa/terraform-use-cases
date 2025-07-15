@@ -9,11 +9,11 @@ variable "lambda_role" {
 }
 
 variable "instance_id" {
-    type = string
+  type = string
 }
 
 variable "region" {
-    type = string
+  type = string
 }
 
 variable "scheduler_role_arn" {
