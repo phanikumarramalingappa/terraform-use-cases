@@ -1,6 +1,6 @@
 locals {
   lambda_functions = {
-    lambda1 = {
+    start_lambda = {
       name                = "start-lambda"
       role                = var.lambda_role
       handler             = "start_lambda.lambda_handler"
@@ -14,7 +14,7 @@ locals {
         region      = var.region
       }
     }
-    lambda2 = {
+    stop_lambda = {
       name                = "stop-lambda"
       role                = var.lambda_role
       handler             = "stop_lambda.lambda_handler"
