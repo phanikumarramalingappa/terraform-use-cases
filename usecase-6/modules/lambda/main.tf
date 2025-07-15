@@ -6,7 +6,7 @@ resource "aws_lambda_function" "lambda" {
   memory_size = 128
   timeout     = 30
   publish     = true
-  environment = {
+  environment {
     variables = {
       instance_id = var.instance_id
       region      = var.region
