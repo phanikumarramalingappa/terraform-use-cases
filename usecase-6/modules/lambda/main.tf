@@ -19,7 +19,7 @@ resource "aws_lambda_function" "start_lambda" {
   memory_size = 128
   timeout     = 30
   publish     = true
-  filename = data.archive_file.zip.output_path
+  filename = data.archive_file.start_lambda.output_path
   environment {
     variables = {
       instance_id = var.instance_id
@@ -36,7 +36,7 @@ resource "aws_lambda_function" "stop_lambda" {
   memory_size = 128
   timeout     = 30
   publish     = true
-  filename = data.archive_file.zip.output_path
+  filename = data.archive_file.stop_lambda.output_path
   environment {
     variables = {
       instance_id = var.instance_id
