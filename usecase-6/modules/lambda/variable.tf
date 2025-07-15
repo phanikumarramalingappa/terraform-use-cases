@@ -2,6 +2,7 @@ variable "lambda_function" {
   type = object({
     name      = string
     role      = string
+    lambda_path_file = string
   })
 }
 
