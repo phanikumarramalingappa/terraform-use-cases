@@ -126,7 +126,7 @@
                             "module_connection": false
                         }
                     ],
-                    "s3_bucket": [
+                    "s3_key": [
                         {
                             "type": "module",
                             "name": "lambda",
@@ -146,7 +146,7 @@
                             "module_connection": false
                         }
                     ],
-                    "s3_key": [
+                    "s3_bucket": [
                         {
                             "type": "module",
                             "name": "lambda",
@@ -303,7 +303,7 @@
                             "module_connection": false
                         }
                     ],
-                    "s3_bucket": [
+                    "s3_key": [
                         {
                             "type": "module",
                             "name": "lambda",
@@ -323,7 +323,7 @@
                             "module_connection": false
                         }
                     ],
-                    "s3_key": [
+                    "s3_bucket": [
                         {
                             "type": "module",
                             "name": "lambda",
@@ -979,7 +979,7 @@
                         },
                         {
                             "type": "variable",
-                            "name": "sns_topic_name",
+                            "name": "bucket_name",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/sns/variable.tf",
                             "module_connection": false
                         }
@@ -1230,7 +1230,7 @@
                         },
                         {
                             "type": "variable",
-                            "name": "sns_topic_name",
+                            "name": "bucket_name",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/sns/variable.tf",
                             "module_connection": false
                         }
@@ -1261,7 +1261,7 @@
                     ],
                     [
                         11,
-                        "  region = var.region\n"
+                        "  region = \"us-east-1\"\n"
                     ],
                     [
                         12,
@@ -1294,6 +1294,190 @@
                 "details": [],
                 "check_len": null,
                 "definition_context_file_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/provider.tf"
+            },
+            {
+                "check_id": "CKV_AWS_20",
+                "bc_check_id": "BC_AWS_S3_1",
+                "check_name": "S3 Bucket has an ACL defined which allows public READ access.",
+                "check_result": {
+                    "result": "PASSED",
+                    "entity": {
+                        "aws_s3_bucket": {
+                            "s3_input_bucket": {
+                                "__end_line__": 3,
+                                "__start_line__": 1,
+                                "bucket": [
+                                    "input-image-non-resize-1"
+                                ],
+                                "__address__": "module.s3_bucket.aws_s3_bucket.s3_input_bucket"
+                            }
+                        }
+                    },
+                    "evaluated_keys": [
+                        "access_control_policy/grant",
+                        "access_control_policy/grant/*/grantee/uri",
+                        "acl",
+                        "resource_type",
+                        "access_control_policy"
+                    ]
+                },
+                "code_block": [
+                    [
+                        1,
+                        "resource \"aws_s3_bucket\" \"s3_input_bucket\" {\n"
+                    ],
+                    [
+                        2,
+                        "  bucket = var.input_bucket_name\n"
+                    ],
+                    [
+                        3,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/modules/s3/main.tf",
+                "file_abs_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/main.tf",
+                "repo_file_path": "/modules/s3/main.tf",
+                "file_line_range": [
+                    1,
+                    3
+                ],
+                "resource": "module.s3_bucket.aws_s3_bucket.s3_input_bucket",
+                "evaluations": null,
+                "check_class": "checkov.common.graph.checks_infra.base_check",
+                "fixed_definition": null,
+                "entity_tags": {},
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-1-acl-read-permissions-everyone",
+                "details": [],
+                "check_len": null,
+                "definition_context_file_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/main.tf",
+                "breadcrumbs": {
+                    "bucket": [
+                        {
+                            "type": "module",
+                            "name": "s3_bucket",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "input_bucket_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/variable.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "source_module_": [
+                        {
+                            "type": "module",
+                            "name": "s3_bucket",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
+                            "idx": 8,
+                            "source_module_object": null
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AWS_20",
+                "bc_check_id": "BC_AWS_S3_1",
+                "check_name": "S3 Bucket has an ACL defined which allows public READ access.",
+                "check_result": {
+                    "result": "PASSED",
+                    "entity": {
+                        "aws_s3_bucket": {
+                            "s3_output_bucket": {
+                                "__end_line__": 7,
+                                "__start_line__": 5,
+                                "bucket": [
+                                    "output-image-resize-uc5-1"
+                                ],
+                                "__address__": "module.s3_bucket.aws_s3_bucket.s3_output_bucket"
+                            }
+                        }
+                    },
+                    "evaluated_keys": [
+                        "access_control_policy/grant",
+                        "access_control_policy/grant/*/grantee/uri",
+                        "acl",
+                        "resource_type",
+                        "access_control_policy"
+                    ]
+                },
+                "code_block": [
+                    [
+                        5,
+                        "resource \"aws_s3_bucket\" \"s3_output_bucket\" {\n"
+                    ],
+                    [
+                        6,
+                        "  bucket = var.output_bucket_name\n"
+                    ],
+                    [
+                        7,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/modules/s3/main.tf",
+                "file_abs_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/main.tf",
+                "repo_file_path": "/modules/s3/main.tf",
+                "file_line_range": [
+                    5,
+                    7
+                ],
+                "resource": "module.s3_bucket.aws_s3_bucket.s3_output_bucket",
+                "evaluations": null,
+                "check_class": "checkov.common.graph.checks_infra.base_check",
+                "fixed_definition": null,
+                "entity_tags": {},
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-1-acl-read-permissions-everyone",
+                "details": [],
+                "check_len": null,
+                "definition_context_file_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/main.tf",
+                "breadcrumbs": {
+                    "bucket": [
+                        {
+                            "type": "module",
+                            "name": "s3_bucket",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "output_bucket_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/variable.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "source_module_": [
+                        {
+                            "type": "module",
+                            "name": "s3_bucket",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
+                            "idx": 8,
+                            "source_module_object": null
+                        }
+                    ]
+                }
             },
             {
                 "check_id": "CKV2_AWS_62",
@@ -1426,9 +1610,9 @@
                         }
                     },
                     "evaluated_keys": [
+                        "cors/allow_origins",
                         "cors/allow_methods",
-                        "resource_type",
-                        "cors/allow_origins"
+                        "resource_type"
                     ]
                 },
                 "code_block": [
@@ -1544,7 +1728,7 @@
                             "module_connection": false
                         }
                     ],
-                    "s3_bucket": [
+                    "s3_key": [
                         {
                             "type": "module",
                             "name": "lambda",
@@ -1564,7 +1748,7 @@
                             "module_connection": false
                         }
                     ],
-                    "s3_key": [
+                    "s3_bucket": [
                         {
                             "type": "module",
                             "name": "lambda",
@@ -1614,12 +1798,12 @@
                         }
                     },
                     "evaluated_keys": [
-                        "acl",
-                        "access_control_policy/grant/*/permission",
                         "access_control_policy/grant",
+                        "access_control_policy/grant/*/permission",
                         "access_control_policy/grant/*/grantee/uri",
-                        "access_control_policy",
-                        "resource_type"
+                        "acl",
+                        "resource_type",
+                        "access_control_policy"
                     ]
                 },
                 "code_block": [
@@ -1707,12 +1891,12 @@
                         }
                     },
                     "evaluated_keys": [
-                        "acl",
-                        "access_control_policy/grant/*/permission",
                         "access_control_policy/grant",
+                        "access_control_policy/grant/*/permission",
                         "access_control_policy/grant/*/grantee/uri",
-                        "access_control_policy",
-                        "resource_type"
+                        "acl",
+                        "resource_type",
+                        "access_control_policy"
                     ]
                 },
                 "code_block": [
@@ -1782,190 +1966,6 @@
                 }
             },
             {
-                "check_id": "CKV_AWS_20",
-                "bc_check_id": "BC_AWS_S3_1",
-                "check_name": "S3 Bucket has an ACL defined which allows public READ access.",
-                "check_result": {
-                    "result": "PASSED",
-                    "entity": {
-                        "aws_s3_bucket": {
-                            "s3_input_bucket": {
-                                "__end_line__": 3,
-                                "__start_line__": 1,
-                                "bucket": [
-                                    "input-image-non-resize-1"
-                                ],
-                                "__address__": "module.s3_bucket.aws_s3_bucket.s3_input_bucket"
-                            }
-                        }
-                    },
-                    "evaluated_keys": [
-                        "acl",
-                        "access_control_policy/grant",
-                        "access_control_policy/grant/*/grantee/uri",
-                        "access_control_policy",
-                        "resource_type"
-                    ]
-                },
-                "code_block": [
-                    [
-                        1,
-                        "resource \"aws_s3_bucket\" \"s3_input_bucket\" {\n"
-                    ],
-                    [
-                        2,
-                        "  bucket = var.input_bucket_name\n"
-                    ],
-                    [
-                        3,
-                        "}\n"
-                    ]
-                ],
-                "file_path": "/modules/s3/main.tf",
-                "file_abs_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/main.tf",
-                "repo_file_path": "/modules/s3/main.tf",
-                "file_line_range": [
-                    1,
-                    3
-                ],
-                "resource": "module.s3_bucket.aws_s3_bucket.s3_input_bucket",
-                "evaluations": null,
-                "check_class": "checkov.common.graph.checks_infra.base_check",
-                "fixed_definition": null,
-                "entity_tags": {},
-                "caller_file_path": null,
-                "caller_file_line_range": null,
-                "resource_address": null,
-                "severity": null,
-                "bc_category": null,
-                "benchmarks": null,
-                "description": null,
-                "short_description": null,
-                "vulnerability_details": null,
-                "connected_node": null,
-                "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-1-acl-read-permissions-everyone",
-                "details": [],
-                "check_len": null,
-                "definition_context_file_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/main.tf",
-                "breadcrumbs": {
-                    "bucket": [
-                        {
-                            "type": "module",
-                            "name": "s3_bucket",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "input_bucket_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/variable.tf",
-                            "module_connection": false
-                        }
-                    ],
-                    "source_module_": [
-                        {
-                            "type": "module",
-                            "name": "s3_bucket",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 8,
-                            "source_module_object": null
-                        }
-                    ]
-                }
-            },
-            {
-                "check_id": "CKV_AWS_20",
-                "bc_check_id": "BC_AWS_S3_1",
-                "check_name": "S3 Bucket has an ACL defined which allows public READ access.",
-                "check_result": {
-                    "result": "PASSED",
-                    "entity": {
-                        "aws_s3_bucket": {
-                            "s3_output_bucket": {
-                                "__end_line__": 7,
-                                "__start_line__": 5,
-                                "bucket": [
-                                    "output-image-resize-uc5-1"
-                                ],
-                                "__address__": "module.s3_bucket.aws_s3_bucket.s3_output_bucket"
-                            }
-                        }
-                    },
-                    "evaluated_keys": [
-                        "acl",
-                        "access_control_policy/grant",
-                        "access_control_policy/grant/*/grantee/uri",
-                        "access_control_policy",
-                        "resource_type"
-                    ]
-                },
-                "code_block": [
-                    [
-                        5,
-                        "resource \"aws_s3_bucket\" \"s3_output_bucket\" {\n"
-                    ],
-                    [
-                        6,
-                        "  bucket = var.output_bucket_name\n"
-                    ],
-                    [
-                        7,
-                        "}\n"
-                    ]
-                ],
-                "file_path": "/modules/s3/main.tf",
-                "file_abs_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/main.tf",
-                "repo_file_path": "/modules/s3/main.tf",
-                "file_line_range": [
-                    5,
-                    7
-                ],
-                "resource": "module.s3_bucket.aws_s3_bucket.s3_output_bucket",
-                "evaluations": null,
-                "check_class": "checkov.common.graph.checks_infra.base_check",
-                "fixed_definition": null,
-                "entity_tags": {},
-                "caller_file_path": null,
-                "caller_file_line_range": null,
-                "resource_address": null,
-                "severity": null,
-                "bc_category": null,
-                "benchmarks": null,
-                "description": null,
-                "short_description": null,
-                "vulnerability_details": null,
-                "connected_node": null,
-                "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-1-acl-read-permissions-everyone",
-                "details": [],
-                "check_len": null,
-                "definition_context_file_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/main.tf",
-                "breadcrumbs": {
-                    "bucket": [
-                        {
-                            "type": "module",
-                            "name": "s3_bucket",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "output_bucket_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/variable.tf",
-                            "module_connection": false
-                        }
-                    ],
-                    "source_module_": [
-                        {
-                            "type": "module",
-                            "name": "s3_bucket",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 8,
-                            "source_module_object": null
-                        }
-                    ]
-                }
-            },
-            {
                 "check_id": "CKV_AWS_19",
                 "bc_check_id": "BC_AWS_S3_14",
                 "check_name": "Ensure all data stored in the S3 bucket is securely encrypted at rest",
@@ -1984,9 +1984,9 @@
                         }
                     },
                     "evaluated_keys": [
-                        "resource_type",
+                        "rule/apply_server_side_encryption_by_default/sse_algorithm",
                         "server_side_encryption_configuration/rule/apply_server_side_encryption_by_default/sse_algorithm",
-                        "rule/apply_server_side_encryption_by_default/sse_algorithm"
+                        "resource_type"
                     ]
                 },
                 "code_block": [
@@ -2074,9 +2074,9 @@
                         }
                     },
                     "evaluated_keys": [
-                        "resource_type",
+                        "rule/apply_server_side_encryption_by_default/sse_algorithm",
                         "server_side_encryption_configuration/rule/apply_server_side_encryption_by_default/sse_algorithm",
-                        "rule/apply_server_side_encryption_by_default/sse_algorithm"
+                        "resource_type"
                     ]
                 },
                 "code_block": [
@@ -2273,7 +2273,7 @@
                             "module_connection": false
                         }
                     ],
-                    "s3_bucket": [
+                    "s3_key": [
                         {
                             "type": "module",
                             "name": "lambda",
@@ -2293,7 +2293,7 @@
                             "module_connection": false
                         }
                     ],
-                    "s3_key": [
+                    "s3_bucket": [
                         {
                             "type": "module",
                             "name": "lambda",
@@ -2450,7 +2450,7 @@
                             "module_connection": false
                         }
                     ],
-                    "s3_bucket": [
+                    "s3_key": [
                         {
                             "type": "module",
                             "name": "lambda",
@@ -2470,7 +2470,7 @@
                             "module_connection": false
                         }
                     ],
-                    "s3_key": [
+                    "s3_bucket": [
                         {
                             "type": "module",
                             "name": "lambda",
@@ -2627,7 +2627,7 @@
                             "module_connection": false
                         }
                     ],
-                    "s3_bucket": [
+                    "s3_key": [
                         {
                             "type": "module",
                             "name": "lambda",
@@ -2647,7 +2647,7 @@
                             "module_connection": false
                         }
                     ],
-                    "s3_key": [
+                    "s3_bucket": [
                         {
                             "type": "module",
                             "name": "lambda",
@@ -2804,7 +2804,7 @@
                             "module_connection": false
                         }
                     ],
-                    "s3_bucket": [
+                    "s3_key": [
                         {
                             "type": "module",
                             "name": "lambda",
@@ -2824,7 +2824,7 @@
                             "module_connection": false
                         }
                     ],
-                    "s3_key": [
+                    "s3_bucket": [
                         {
                             "type": "module",
                             "name": "lambda",
@@ -2981,7 +2981,7 @@
                             "module_connection": false
                         }
                     ],
-                    "s3_bucket": [
+                    "s3_key": [
                         {
                             "type": "module",
                             "name": "lambda",
@@ -3001,7 +3001,7 @@
                             "module_connection": false
                         }
                     ],
-                    "s3_key": [
+                    "s3_bucket": [
                         {
                             "type": "module",
                             "name": "lambda",
@@ -3130,9 +3130,9 @@
                         }
                     },
                     "evaluated_keys": [
+                        "replication_configuration/rules/*/status",
                         "rule/*/status",
-                        "resource_type",
-                        "replication_configuration/rules/*/status"
+                        "resource_type"
                     ]
                 },
                 "code_block": [
@@ -3220,9 +3220,9 @@
                         }
                     },
                     "evaluated_keys": [
+                        "replication_configuration/rules/*/status",
                         "rule/*/status",
-                        "resource_type",
-                        "replication_configuration/rules/*/status"
+                        "resource_type"
                     ]
                 },
                 "code_block": [
@@ -3292,186 +3292,6 @@
                 }
             },
             {
-                "check_id": "CKV_AWS_21",
-                "bc_check_id": "BC_AWS_S3_16",
-                "check_name": "Ensure all data stored in the S3 bucket have versioning enabled",
-                "check_result": {
-                    "result": "FAILED",
-                    "entity": {
-                        "aws_s3_bucket": {
-                            "s3_input_bucket": {
-                                "__end_line__": 3,
-                                "__start_line__": 1,
-                                "bucket": [
-                                    "input-image-non-resize-1"
-                                ],
-                                "__address__": "module.s3_bucket.aws_s3_bucket.s3_input_bucket"
-                            }
-                        }
-                    },
-                    "evaluated_keys": [
-                        "versioning/enabled",
-                        "resource_type",
-                        "versioning_configuration/status"
-                    ]
-                },
-                "code_block": [
-                    [
-                        1,
-                        "resource \"aws_s3_bucket\" \"s3_input_bucket\" {\n"
-                    ],
-                    [
-                        2,
-                        "  bucket = var.input_bucket_name\n"
-                    ],
-                    [
-                        3,
-                        "}\n"
-                    ]
-                ],
-                "file_path": "/modules/s3/main.tf",
-                "file_abs_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/main.tf",
-                "repo_file_path": "/modules/s3/main.tf",
-                "file_line_range": [
-                    1,
-                    3
-                ],
-                "resource": "module.s3_bucket.aws_s3_bucket.s3_input_bucket",
-                "evaluations": null,
-                "check_class": "checkov.common.graph.checks_infra.base_check",
-                "fixed_definition": null,
-                "entity_tags": {},
-                "caller_file_path": null,
-                "caller_file_line_range": null,
-                "resource_address": null,
-                "severity": null,
-                "bc_category": null,
-                "benchmarks": null,
-                "description": null,
-                "short_description": null,
-                "vulnerability_details": null,
-                "connected_node": null,
-                "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-16-enable-versioning",
-                "details": [],
-                "check_len": null,
-                "definition_context_file_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/main.tf",
-                "breadcrumbs": {
-                    "bucket": [
-                        {
-                            "type": "module",
-                            "name": "s3_bucket",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "input_bucket_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/variable.tf",
-                            "module_connection": false
-                        }
-                    ],
-                    "source_module_": [
-                        {
-                            "type": "module",
-                            "name": "s3_bucket",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 8,
-                            "source_module_object": null
-                        }
-                    ]
-                }
-            },
-            {
-                "check_id": "CKV_AWS_21",
-                "bc_check_id": "BC_AWS_S3_16",
-                "check_name": "Ensure all data stored in the S3 bucket have versioning enabled",
-                "check_result": {
-                    "result": "FAILED",
-                    "entity": {
-                        "aws_s3_bucket": {
-                            "s3_output_bucket": {
-                                "__end_line__": 7,
-                                "__start_line__": 5,
-                                "bucket": [
-                                    "output-image-resize-uc5-1"
-                                ],
-                                "__address__": "module.s3_bucket.aws_s3_bucket.s3_output_bucket"
-                            }
-                        }
-                    },
-                    "evaluated_keys": [
-                        "versioning/enabled",
-                        "resource_type",
-                        "versioning_configuration/status"
-                    ]
-                },
-                "code_block": [
-                    [
-                        5,
-                        "resource \"aws_s3_bucket\" \"s3_output_bucket\" {\n"
-                    ],
-                    [
-                        6,
-                        "  bucket = var.output_bucket_name\n"
-                    ],
-                    [
-                        7,
-                        "}\n"
-                    ]
-                ],
-                "file_path": "/modules/s3/main.tf",
-                "file_abs_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/main.tf",
-                "repo_file_path": "/modules/s3/main.tf",
-                "file_line_range": [
-                    5,
-                    7
-                ],
-                "resource": "module.s3_bucket.aws_s3_bucket.s3_output_bucket",
-                "evaluations": null,
-                "check_class": "checkov.common.graph.checks_infra.base_check",
-                "fixed_definition": null,
-                "entity_tags": {},
-                "caller_file_path": null,
-                "caller_file_line_range": null,
-                "resource_address": null,
-                "severity": null,
-                "bc_category": null,
-                "benchmarks": null,
-                "description": null,
-                "short_description": null,
-                "vulnerability_details": null,
-                "connected_node": null,
-                "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-16-enable-versioning",
-                "details": [],
-                "check_len": null,
-                "definition_context_file_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/main.tf",
-                "breadcrumbs": {
-                    "bucket": [
-                        {
-                            "type": "module",
-                            "name": "s3_bucket",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "output_bucket_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/variable.tf",
-                            "module_connection": false
-                        }
-                    ],
-                    "source_module_": [
-                        {
-                            "type": "module",
-                            "name": "s3_bucket",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 8,
-                            "source_module_object": null
-                        }
-                    ]
-                }
-            },
-            {
                 "check_id": "CKV2_AWS_6",
                 "bc_check_id": "BC_AWS_NETWORKING_52",
                 "check_name": "Ensure that S3 bucket has a Public Access block",
@@ -3490,9 +3310,9 @@
                         }
                     },
                     "evaluated_keys": [
-                        "resource_type",
+                        "block_public_policy",
                         "block_public_acls",
-                        "block_public_policy"
+                        "resource_type"
                     ]
                 },
                 "code_block": [
@@ -3580,9 +3400,9 @@
                         }
                     },
                     "evaluated_keys": [
-                        "resource_type",
+                        "block_public_policy",
                         "block_public_acls",
-                        "block_public_policy"
+                        "resource_type"
                     ]
                 },
                 "code_block": [
@@ -3740,6 +3560,186 @@
                 }
             },
             {
+                "check_id": "CKV_AWS_21",
+                "bc_check_id": "BC_AWS_S3_16",
+                "check_name": "Ensure all data stored in the S3 bucket have versioning enabled",
+                "check_result": {
+                    "result": "FAILED",
+                    "entity": {
+                        "aws_s3_bucket": {
+                            "s3_input_bucket": {
+                                "__end_line__": 3,
+                                "__start_line__": 1,
+                                "bucket": [
+                                    "input-image-non-resize-1"
+                                ],
+                                "__address__": "module.s3_bucket.aws_s3_bucket.s3_input_bucket"
+                            }
+                        }
+                    },
+                    "evaluated_keys": [
+                        "versioning/enabled",
+                        "resource_type",
+                        "versioning_configuration/status"
+                    ]
+                },
+                "code_block": [
+                    [
+                        1,
+                        "resource \"aws_s3_bucket\" \"s3_input_bucket\" {\n"
+                    ],
+                    [
+                        2,
+                        "  bucket = var.input_bucket_name\n"
+                    ],
+                    [
+                        3,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/modules/s3/main.tf",
+                "file_abs_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/main.tf",
+                "repo_file_path": "/modules/s3/main.tf",
+                "file_line_range": [
+                    1,
+                    3
+                ],
+                "resource": "module.s3_bucket.aws_s3_bucket.s3_input_bucket",
+                "evaluations": null,
+                "check_class": "checkov.common.graph.checks_infra.base_check",
+                "fixed_definition": null,
+                "entity_tags": {},
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-16-enable-versioning",
+                "details": [],
+                "check_len": null,
+                "definition_context_file_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/main.tf",
+                "breadcrumbs": {
+                    "bucket": [
+                        {
+                            "type": "module",
+                            "name": "s3_bucket",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "input_bucket_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/variable.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "source_module_": [
+                        {
+                            "type": "module",
+                            "name": "s3_bucket",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
+                            "idx": 8,
+                            "source_module_object": null
+                        }
+                    ]
+                }
+            },
+            {
+                "check_id": "CKV_AWS_21",
+                "bc_check_id": "BC_AWS_S3_16",
+                "check_name": "Ensure all data stored in the S3 bucket have versioning enabled",
+                "check_result": {
+                    "result": "FAILED",
+                    "entity": {
+                        "aws_s3_bucket": {
+                            "s3_output_bucket": {
+                                "__end_line__": 7,
+                                "__start_line__": 5,
+                                "bucket": [
+                                    "output-image-resize-uc5-1"
+                                ],
+                                "__address__": "module.s3_bucket.aws_s3_bucket.s3_output_bucket"
+                            }
+                        }
+                    },
+                    "evaluated_keys": [
+                        "versioning/enabled",
+                        "resource_type",
+                        "versioning_configuration/status"
+                    ]
+                },
+                "code_block": [
+                    [
+                        5,
+                        "resource \"aws_s3_bucket\" \"s3_output_bucket\" {\n"
+                    ],
+                    [
+                        6,
+                        "  bucket = var.output_bucket_name\n"
+                    ],
+                    [
+                        7,
+                        "}\n"
+                    ]
+                ],
+                "file_path": "/modules/s3/main.tf",
+                "file_abs_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/main.tf",
+                "repo_file_path": "/modules/s3/main.tf",
+                "file_line_range": [
+                    5,
+                    7
+                ],
+                "resource": "module.s3_bucket.aws_s3_bucket.s3_output_bucket",
+                "evaluations": null,
+                "check_class": "checkov.common.graph.checks_infra.base_check",
+                "fixed_definition": null,
+                "entity_tags": {},
+                "caller_file_path": null,
+                "caller_file_line_range": null,
+                "resource_address": null,
+                "severity": null,
+                "bc_category": null,
+                "benchmarks": null,
+                "description": null,
+                "short_description": null,
+                "vulnerability_details": null,
+                "connected_node": null,
+                "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-16-enable-versioning",
+                "details": [],
+                "check_len": null,
+                "definition_context_file_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/main.tf",
+                "breadcrumbs": {
+                    "bucket": [
+                        {
+                            "type": "module",
+                            "name": "s3_bucket",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "output_bucket_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/variable.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "source_module_": [
+                        {
+                            "type": "module",
+                            "name": "s3_bucket",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
+                            "idx": 8,
+                            "source_module_object": null
+                        }
+                    ]
+                }
+            },
+            {
                 "check_id": "CKV_AWS_145",
                 "bc_check_id": "BC_AWS_GENERAL_56",
                 "check_name": "Ensure that S3 buckets are encrypted with KMS by default",
@@ -3758,9 +3758,9 @@
                         }
                     },
                     "evaluated_keys": [
-                        "resource_type",
                         "server_side_encryption_configuration/rule/apply_server_side_encryption_by_default/sse_algorithm",
-                        "rule/apply_server_side_encryption_by_default/sse_algorithm"
+                        "rule/apply_server_side_encryption_by_default/sse_algorithm",
+                        "resource_type"
                     ]
                 },
                 "code_block": [
@@ -3848,9 +3848,9 @@
                         }
                     },
                     "evaluated_keys": [
-                        "resource_type",
                         "server_side_encryption_configuration/rule/apply_server_side_encryption_by_default/sse_algorithm",
-                        "rule/apply_server_side_encryption_by_default/sse_algorithm"
+                        "rule/apply_server_side_encryption_by_default/sse_algorithm",
+                        "resource_type"
                     ]
                 },
                 "code_block": [
@@ -3920,9 +3920,9 @@
                 }
             },
             {
-                "check_id": "CKV_AWS_18",
-                "bc_check_id": "BC_AWS_S3_13",
-                "check_name": "Ensure the S3 bucket has access logging enabled",
+                "check_id": "CKV2_AWS_61",
+                "bc_check_id": "BC_AWS_LOGGING_35",
+                "check_name": "Ensure that an S3 bucket has a lifecycle configuration",
                 "check_result": {
                     "result": "FAILED",
                     "entity": {
@@ -3938,8 +3938,8 @@
                         }
                     },
                     "evaluated_keys": [
-                        "resource_type",
-                        "logging"
+                        "lifecycle_rule",
+                        "resource_type"
                     ]
                 },
                 "code_block": [
@@ -3978,7 +3978,7 @@
                 "short_description": null,
                 "vulnerability_details": null,
                 "connected_node": null,
-                "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-13-enable-logging",
+                "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-logging-policies/bc-aws-2-61",
                 "details": [],
                 "check_len": null,
                 "definition_context_file_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/main.tf",
@@ -4009,9 +4009,9 @@
                 }
             },
             {
-                "check_id": "CKV_AWS_18",
-                "bc_check_id": "BC_AWS_S3_13",
-                "check_name": "Ensure the S3 bucket has access logging enabled",
+                "check_id": "CKV2_AWS_61",
+                "bc_check_id": "BC_AWS_LOGGING_35",
+                "check_name": "Ensure that an S3 bucket has a lifecycle configuration",
                 "check_result": {
                     "result": "FAILED",
                     "entity": {
@@ -4027,8 +4027,8 @@
                         }
                     },
                     "evaluated_keys": [
-                        "resource_type",
-                        "logging"
+                        "lifecycle_rule",
+                        "resource_type"
                     ]
                 },
                 "code_block": [
@@ -4067,7 +4067,7 @@
                 "short_description": null,
                 "vulnerability_details": null,
                 "connected_node": null,
-                "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-13-enable-logging",
+                "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-logging-policies/bc-aws-2-61",
                 "details": [],
                 "check_len": null,
                 "definition_context_file_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/main.tf",
@@ -4098,9 +4098,9 @@
                 }
             },
             {
-                "check_id": "CKV2_AWS_61",
-                "bc_check_id": "BC_AWS_LOGGING_35",
-                "check_name": "Ensure that an S3 bucket has a lifecycle configuration",
+                "check_id": "CKV_AWS_18",
+                "bc_check_id": "BC_AWS_S3_13",
+                "check_name": "Ensure the S3 bucket has access logging enabled",
                 "check_result": {
                     "result": "FAILED",
                     "entity": {
@@ -4116,8 +4116,8 @@
                         }
                     },
                     "evaluated_keys": [
-                        "resource_type",
-                        "lifecycle_rule"
+                        "logging",
+                        "resource_type"
                     ]
                 },
                 "code_block": [
@@ -4156,7 +4156,7 @@
                 "short_description": null,
                 "vulnerability_details": null,
                 "connected_node": null,
-                "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-logging-policies/bc-aws-2-61",
+                "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-13-enable-logging",
                 "details": [],
                 "check_len": null,
                 "definition_context_file_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/main.tf",
@@ -4187,9 +4187,9 @@
                 }
             },
             {
-                "check_id": "CKV2_AWS_61",
-                "bc_check_id": "BC_AWS_LOGGING_35",
-                "check_name": "Ensure that an S3 bucket has a lifecycle configuration",
+                "check_id": "CKV_AWS_18",
+                "bc_check_id": "BC_AWS_S3_13",
+                "check_name": "Ensure the S3 bucket has access logging enabled",
                 "check_result": {
                     "result": "FAILED",
                     "entity": {
@@ -4205,8 +4205,8 @@
                         }
                     },
                     "evaluated_keys": [
-                        "resource_type",
-                        "lifecycle_rule"
+                        "logging",
+                        "resource_type"
                     ]
                 },
                 "code_block": [
@@ -4245,7 +4245,7 @@
                 "short_description": null,
                 "vulnerability_details": null,
                 "connected_node": null,
-                "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-logging-policies/bc-aws-2-61",
+                "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/s3-13-enable-logging",
                 "details": [],
                 "check_len": null,
                 "definition_context_file_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/s3/main.tf",
