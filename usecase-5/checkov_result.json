@@ -86,26 +86,6 @@
                 "check_len": null,
                 "definition_context_file_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/main.tf",
                 "breadcrumbs": {
-                    "role": [
-                        {
-                            "type": "module",
-                            "name": "lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_function",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/variable.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/main.tf",
-                            "module_connection": false
-                        }
-                    ],
                     "function_name": [
                         {
                             "type": "module",
@@ -166,12 +146,32 @@
                             "module_connection": false
                         }
                     ],
+                    "role": [
+                        {
+                            "type": "module",
+                            "name": "lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_function",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/variable.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/main.tf",
+                            "module_connection": false
+                        }
+                    ],
                     "source_module_": [
                         {
                             "type": "module",
                             "name": "lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 9,
+                            "idx": 11,
                             "source_module_object": null
                         }
                     ]
@@ -263,26 +263,6 @@
                 "check_len": null,
                 "definition_context_file_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/main.tf",
                 "breadcrumbs": {
-                    "role": [
-                        {
-                            "type": "module",
-                            "name": "lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_function",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/variable.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/main.tf",
-                            "module_connection": false
-                        }
-                    ],
                     "function_name": [
                         {
                             "type": "module",
@@ -343,12 +323,32 @@
                             "module_connection": false
                         }
                     ],
+                    "role": [
+                        {
+                            "type": "module",
+                            "name": "lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_function",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/variable.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/main.tf",
+                            "module_connection": false
+                        }
+                    ],
                     "source_module_": [
                         {
                             "type": "module",
                             "name": "lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 9,
+                            "idx": 11,
                             "source_module_object": null
                         }
                     ]
@@ -463,7 +463,7 @@
                             "type": "module",
                             "name": "lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 9,
+                            "idx": 11,
                             "source_module_object": null
                         }
                     ]
@@ -580,7 +580,7 @@
                             "type": "module",
                             "name": "lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 9,
+                            "idx": 11,
                             "source_module_object": null
                         }
                     ]
@@ -659,7 +659,7 @@
                             "type": "module",
                             "name": "s3_bucket",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 8,
+                            "idx": 10,
                             "source_module_object": null
                         }
                     ]
@@ -738,7 +738,7 @@
                             "type": "module",
                             "name": "s3_bucket",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 8,
+                            "idx": 10,
                             "source_module_object": null
                         }
                     ]
@@ -979,7 +979,7 @@
                         },
                         {
                             "type": "variable",
-                            "name": "bucket_name",
+                            "name": "sns_topic_name",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/sns/variable.tf",
                             "module_connection": false
                         }
@@ -989,7 +989,7 @@
                             "type": "module",
                             "name": "sns_topic",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 7,
+                            "idx": 9,
                             "source_module_object": null
                         }
                     ]
@@ -1230,7 +1230,7 @@
                         },
                         {
                             "type": "variable",
-                            "name": "bucket_name",
+                            "name": "sns_topic_name",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/sns/variable.tf",
                             "module_connection": false
                         }
@@ -1240,7 +1240,7 @@
                             "type": "module",
                             "name": "sns_topic",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 7,
+                            "idx": 9,
                             "source_module_object": null
                         }
                     ]
@@ -1314,11 +1314,11 @@
                         }
                     },
                     "evaluated_keys": [
-                        "access_control_policy/grant",
                         "access_control_policy/grant/*/grantee/uri",
-                        "acl",
+                        "access_control_policy",
                         "resource_type",
-                        "access_control_policy"
+                        "acl",
+                        "access_control_policy/grant"
                     ]
                 },
                 "code_block": [
@@ -1381,7 +1381,7 @@
                             "type": "module",
                             "name": "s3_bucket",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 8,
+                            "idx": 10,
                             "source_module_object": null
                         }
                     ]
@@ -1406,11 +1406,11 @@
                         }
                     },
                     "evaluated_keys": [
-                        "access_control_policy/grant",
                         "access_control_policy/grant/*/grantee/uri",
-                        "acl",
+                        "access_control_policy",
                         "resource_type",
-                        "access_control_policy"
+                        "acl",
+                        "access_control_policy/grant"
                     ]
                 },
                 "code_block": [
@@ -1473,7 +1473,7 @@
                             "type": "module",
                             "name": "s3_bucket",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 8,
+                            "idx": 10,
                             "source_module_object": null
                         }
                     ]
@@ -1561,7 +1561,7 @@
                             "type": "module",
                             "name": "s3_bucket",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 8,
+                            "idx": 10,
                             "source_module_object": null
                         }
                     ]
@@ -1591,7 +1591,7 @@
                                     true
                                 ],
                                 "role": [
-                                    "var.lambda_role"
+                                    "arn:aws:iam::427521931204:role/service-role/lambda_handler-role-zeouuhy0"
                                 ],
                                 "runtime": [
                                     "python3.9"
@@ -1610,8 +1610,8 @@
                         }
                     },
                     "evaluated_keys": [
-                        "cors/allow_origins",
                         "cors/allow_methods",
+                        "cors/allow_origins",
                         "resource_type"
                     ]
                 },
@@ -1688,26 +1688,6 @@
                 "check_len": null,
                 "definition_context_file_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/main.tf",
                 "breadcrumbs": {
-                    "role": [
-                        {
-                            "type": "module",
-                            "name": "lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_function",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/variable.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/main.tf",
-                            "module_connection": false
-                        }
-                    ],
                     "function_name": [
                         {
                             "type": "module",
@@ -1768,12 +1748,32 @@
                             "module_connection": false
                         }
                     ],
+                    "role": [
+                        {
+                            "type": "module",
+                            "name": "lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_function",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/variable.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/main.tf",
+                            "module_connection": false
+                        }
+                    ],
                     "source_module_": [
                         {
                             "type": "module",
                             "name": "lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 9,
+                            "idx": 11,
                             "source_module_object": null
                         }
                     ]
@@ -1798,12 +1798,12 @@
                         }
                     },
                     "evaluated_keys": [
-                        "access_control_policy/grant",
-                        "access_control_policy/grant/*/permission",
                         "access_control_policy/grant/*/grantee/uri",
+                        "access_control_policy",
                         "acl",
                         "resource_type",
-                        "access_control_policy"
+                        "access_control_policy/grant/*/permission",
+                        "access_control_policy/grant"
                     ]
                 },
                 "code_block": [
@@ -1866,7 +1866,7 @@
                             "type": "module",
                             "name": "s3_bucket",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 8,
+                            "idx": 10,
                             "source_module_object": null
                         }
                     ]
@@ -1891,12 +1891,12 @@
                         }
                     },
                     "evaluated_keys": [
-                        "access_control_policy/grant",
-                        "access_control_policy/grant/*/permission",
                         "access_control_policy/grant/*/grantee/uri",
+                        "access_control_policy",
                         "acl",
                         "resource_type",
-                        "access_control_policy"
+                        "access_control_policy/grant/*/permission",
+                        "access_control_policy/grant"
                     ]
                 },
                 "code_block": [
@@ -1959,7 +1959,7 @@
                             "type": "module",
                             "name": "s3_bucket",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 8,
+                            "idx": 10,
                             "source_module_object": null
                         }
                     ]
@@ -1985,8 +1985,8 @@
                     },
                     "evaluated_keys": [
                         "rule/apply_server_side_encryption_by_default/sse_algorithm",
-                        "server_side_encryption_configuration/rule/apply_server_side_encryption_by_default/sse_algorithm",
-                        "resource_type"
+                        "resource_type",
+                        "server_side_encryption_configuration/rule/apply_server_side_encryption_by_default/sse_algorithm"
                     ]
                 },
                 "code_block": [
@@ -2049,7 +2049,7 @@
                             "type": "module",
                             "name": "s3_bucket",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 8,
+                            "idx": 10,
                             "source_module_object": null
                         }
                     ]
@@ -2075,8 +2075,8 @@
                     },
                     "evaluated_keys": [
                         "rule/apply_server_side_encryption_by_default/sse_algorithm",
-                        "server_side_encryption_configuration/rule/apply_server_side_encryption_by_default/sse_algorithm",
-                        "resource_type"
+                        "resource_type",
+                        "server_side_encryption_configuration/rule/apply_server_side_encryption_by_default/sse_algorithm"
                     ]
                 },
                 "code_block": [
@@ -2139,7 +2139,7 @@
                             "type": "module",
                             "name": "s3_bucket",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 8,
+                            "idx": 10,
                             "source_module_object": null
                         }
                     ]
@@ -2233,26 +2233,6 @@
                 "check_len": null,
                 "definition_context_file_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/main.tf",
                 "breadcrumbs": {
-                    "role": [
-                        {
-                            "type": "module",
-                            "name": "lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_function",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/variable.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/main.tf",
-                            "module_connection": false
-                        }
-                    ],
                     "function_name": [
                         {
                             "type": "module",
@@ -2313,12 +2293,32 @@
                             "module_connection": false
                         }
                     ],
+                    "role": [
+                        {
+                            "type": "module",
+                            "name": "lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_function",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/variable.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/main.tf",
+                            "module_connection": false
+                        }
+                    ],
                     "source_module_": [
                         {
                             "type": "module",
                             "name": "lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 9,
+                            "idx": 11,
                             "source_module_object": null
                         }
                     ]
@@ -2410,26 +2410,6 @@
                 "check_len": null,
                 "definition_context_file_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/main.tf",
                 "breadcrumbs": {
-                    "role": [
-                        {
-                            "type": "module",
-                            "name": "lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_function",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/variable.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/main.tf",
-                            "module_connection": false
-                        }
-                    ],
                     "function_name": [
                         {
                             "type": "module",
@@ -2490,12 +2470,32 @@
                             "module_connection": false
                         }
                     ],
+                    "role": [
+                        {
+                            "type": "module",
+                            "name": "lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_function",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/variable.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/main.tf",
+                            "module_connection": false
+                        }
+                    ],
                     "source_module_": [
                         {
                             "type": "module",
                             "name": "lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 9,
+                            "idx": 11,
                             "source_module_object": null
                         }
                     ]
@@ -2587,26 +2587,6 @@
                 "check_len": null,
                 "definition_context_file_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/main.tf",
                 "breadcrumbs": {
-                    "role": [
-                        {
-                            "type": "module",
-                            "name": "lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_function",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/variable.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/main.tf",
-                            "module_connection": false
-                        }
-                    ],
                     "function_name": [
                         {
                             "type": "module",
@@ -2667,12 +2647,32 @@
                             "module_connection": false
                         }
                     ],
+                    "role": [
+                        {
+                            "type": "module",
+                            "name": "lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_function",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/variable.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/main.tf",
+                            "module_connection": false
+                        }
+                    ],
                     "source_module_": [
                         {
                             "type": "module",
                             "name": "lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 9,
+                            "idx": 11,
                             "source_module_object": null
                         }
                     ]
@@ -2764,26 +2764,6 @@
                 "check_len": null,
                 "definition_context_file_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/main.tf",
                 "breadcrumbs": {
-                    "role": [
-                        {
-                            "type": "module",
-                            "name": "lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_function",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/variable.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/main.tf",
-                            "module_connection": false
-                        }
-                    ],
                     "function_name": [
                         {
                             "type": "module",
@@ -2844,12 +2824,32 @@
                             "module_connection": false
                         }
                     ],
+                    "role": [
+                        {
+                            "type": "module",
+                            "name": "lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_function",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/variable.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/main.tf",
+                            "module_connection": false
+                        }
+                    ],
                     "source_module_": [
                         {
                             "type": "module",
                             "name": "lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 9,
+                            "idx": 11,
                             "source_module_object": null
                         }
                     ]
@@ -2941,26 +2941,6 @@
                 "check_len": null,
                 "definition_context_file_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/main.tf",
                 "breadcrumbs": {
-                    "role": [
-                        {
-                            "type": "module",
-                            "name": "lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_function",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/variable.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/main.tf",
-                            "module_connection": false
-                        }
-                    ],
                     "function_name": [
                         {
                             "type": "module",
@@ -3021,12 +3001,32 @@
                             "module_connection": false
                         }
                     ],
+                    "role": [
+                        {
+                            "type": "module",
+                            "name": "lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_function",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/variable.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/modules/lambda/main.tf",
+                            "module_connection": false
+                        }
+                    ],
                     "source_module_": [
                         {
                             "type": "module",
                             "name": "lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 9,
+                            "idx": 11,
                             "source_module_object": null
                         }
                     ]
@@ -3105,7 +3105,7 @@
                             "type": "module",
                             "name": "sns_topic",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 7,
+                            "idx": 9,
                             "source_module_object": null
                         }
                     ]
@@ -3131,8 +3131,8 @@
                     },
                     "evaluated_keys": [
                         "replication_configuration/rules/*/status",
-                        "rule/*/status",
-                        "resource_type"
+                        "resource_type",
+                        "rule/*/status"
                     ]
                 },
                 "code_block": [
@@ -3195,7 +3195,7 @@
                             "type": "module",
                             "name": "s3_bucket",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 8,
+                            "idx": 10,
                             "source_module_object": null
                         }
                     ]
@@ -3221,8 +3221,8 @@
                     },
                     "evaluated_keys": [
                         "replication_configuration/rules/*/status",
-                        "rule/*/status",
-                        "resource_type"
+                        "resource_type",
+                        "rule/*/status"
                     ]
                 },
                 "code_block": [
@@ -3285,7 +3285,7 @@
                             "type": "module",
                             "name": "s3_bucket",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 8,
+                            "idx": 10,
                             "source_module_object": null
                         }
                     ]
@@ -3311,8 +3311,8 @@
                     },
                     "evaluated_keys": [
                         "block_public_policy",
-                        "block_public_acls",
-                        "resource_type"
+                        "resource_type",
+                        "block_public_acls"
                     ]
                 },
                 "code_block": [
@@ -3375,7 +3375,7 @@
                             "type": "module",
                             "name": "s3_bucket",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 8,
+                            "idx": 10,
                             "source_module_object": null
                         }
                     ]
@@ -3401,8 +3401,8 @@
                     },
                     "evaluated_keys": [
                         "block_public_policy",
-                        "block_public_acls",
-                        "resource_type"
+                        "resource_type",
+                        "block_public_acls"
                     ]
                 },
                 "code_block": [
@@ -3465,7 +3465,7 @@
                             "type": "module",
                             "name": "s3_bucket",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 8,
+                            "idx": 10,
                             "source_module_object": null
                         }
                     ]
@@ -3553,7 +3553,7 @@
                             "type": "module",
                             "name": "s3_bucket",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 8,
+                            "idx": 10,
                             "source_module_object": null
                         }
                     ]
@@ -3643,7 +3643,7 @@
                             "type": "module",
                             "name": "s3_bucket",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 8,
+                            "idx": 10,
                             "source_module_object": null
                         }
                     ]
@@ -3733,7 +3733,7 @@
                             "type": "module",
                             "name": "s3_bucket",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 8,
+                            "idx": 10,
                             "source_module_object": null
                         }
                     ]
@@ -3758,9 +3758,9 @@
                         }
                     },
                     "evaluated_keys": [
-                        "server_side_encryption_configuration/rule/apply_server_side_encryption_by_default/sse_algorithm",
                         "rule/apply_server_side_encryption_by_default/sse_algorithm",
-                        "resource_type"
+                        "resource_type",
+                        "server_side_encryption_configuration/rule/apply_server_side_encryption_by_default/sse_algorithm"
                     ]
                 },
                 "code_block": [
@@ -3823,7 +3823,7 @@
                             "type": "module",
                             "name": "s3_bucket",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 8,
+                            "idx": 10,
                             "source_module_object": null
                         }
                     ]
@@ -3848,9 +3848,9 @@
                         }
                     },
                     "evaluated_keys": [
-                        "server_side_encryption_configuration/rule/apply_server_side_encryption_by_default/sse_algorithm",
                         "rule/apply_server_side_encryption_by_default/sse_algorithm",
-                        "resource_type"
+                        "resource_type",
+                        "server_side_encryption_configuration/rule/apply_server_side_encryption_by_default/sse_algorithm"
                     ]
                 },
                 "code_block": [
@@ -3913,7 +3913,7 @@
                             "type": "module",
                             "name": "s3_bucket",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 8,
+                            "idx": 10,
                             "source_module_object": null
                         }
                     ]
@@ -4002,7 +4002,7 @@
                             "type": "module",
                             "name": "s3_bucket",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 8,
+                            "idx": 10,
                             "source_module_object": null
                         }
                     ]
@@ -4091,7 +4091,7 @@
                             "type": "module",
                             "name": "s3_bucket",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 8,
+                            "idx": 10,
                             "source_module_object": null
                         }
                     ]
@@ -4116,8 +4116,8 @@
                         }
                     },
                     "evaluated_keys": [
-                        "logging",
-                        "resource_type"
+                        "resource_type",
+                        "logging"
                     ]
                 },
                 "code_block": [
@@ -4180,7 +4180,7 @@
                             "type": "module",
                             "name": "s3_bucket",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 8,
+                            "idx": 10,
                             "source_module_object": null
                         }
                     ]
@@ -4205,8 +4205,8 @@
                         }
                     },
                     "evaluated_keys": [
-                        "logging",
-                        "resource_type"
+                        "resource_type",
+                        "logging"
                     ]
                 },
                 "code_block": [
@@ -4269,7 +4269,7 @@
                             "type": "module",
                             "name": "s3_bucket",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-5/main.tf",
-                            "idx": 8,
+                            "idx": 10,
                             "source_module_object": null
                         }
                     ]
