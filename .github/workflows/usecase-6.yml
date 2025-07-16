@@ -59,19 +59,19 @@ jobs:
           cat tfplan.json | jq .
           conftest test tfplan.json -p policy
 
-      # - name: Setup TFLint
-      #   uses: terraform-linters/setup-tflint@v4
-      #   with:
-      #     tflint_version: latest
+      - name: Setup TFLint
+        uses: terraform-linters/setup-tflint@v4
+        with:
+          tflint_version: latest
           
-      # - name: Show version
-      #   run: tflint --version
+      - name: Show version
+        run: tflint --version
 
-      # - name: Init TFLint
-      #   run: tflint --init
+      - name: Init TFLint
+        run: tflint --init
         
-      # - name: Run TFLint
-      #   run: tflint -f compact
+      - name: Run TFLint
+        run: tflint -f compact
 
       - name: Setup Python for Checkov
         uses: actions/setup-python@v5.6.0
