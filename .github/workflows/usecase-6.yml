@@ -114,6 +114,8 @@ jobs:
           token: ${{ secrets.GIT_TOKEN }}
           body: |
             ## Terraform Docs ##
+            ```
+            ${{ steps.readme.outputs.content }}
 
       - name: Run implement terraform
         run: |
