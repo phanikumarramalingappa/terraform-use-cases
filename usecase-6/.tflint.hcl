@@ -5,7 +5,7 @@ plugin "aws" {
   region  = "us-east-1"
 }
 
-# Enable all default rules for AWS
+# Enabling all default rules for AWS
 rule "aws_instance_invalid_type" { enabled = true }
 rule "aws_db_instance_invalid_type" { enabled = true }
 rule "terraform_unused_declarations" { enabled = true }
