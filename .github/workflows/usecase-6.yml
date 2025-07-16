@@ -1,11 +1,18 @@
 name: Terraform Github Use Case 6
 
+# on:
+#   push:
+#     paths:
+#       - 'usecase-6/**'
+#       - '.github/workflows/usecase-6.yml'
+#     branches: main
+
 on:
-  push:
+  pull_request:
     paths:
       - 'usecase-6/**'
       - '.github/workflows/usecase-6.yml'
-    branches: main
+    types: [opened, synchronize]
   
 permissions:
   id-token: write
@@ -94,16 +101,21 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
         continue-on-error: true
-    
-      # - name: Istall and Run terraform docs
-      #   run: |
-      #     curl -sSLo terraform-docs.tar.gz https://terraform-docs.io/dl/v0.20.0/terraform-docs-v0.20.0-linux-amd64.tar.gz
-      #     tar -xzf terraform-docs.tar.gz
-      #     chmod +x terraform-docs
-      #     sudo mv terraform-docs /usr/local/bin/
-      #     pwd
-      #     terraform-docs --version
-      #     terraform-docs markdown . | tee README.md
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: terraform-docs
+          run: usecase/README.md
+          
+      - name: Add README.md
+        uses: peter-evans/create-pull-request@v7.0.8
+        with:
+          token: ${{ secrets.GIT_TOKEN }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            ## Terraform Docs ##
+            ${{ steps.readme.outputs.content }}
 
       - name: Run implement terraform
         run: |
