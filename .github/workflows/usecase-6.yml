@@ -99,7 +99,7 @@ jobs:
           chmod +x terraform-docs
           sudo mv terraform-docs /usr/local/bin/
           terraform-docs --version
-          terraform-docs markdown .
+          terraform-docs markdown . > README.md
          
       - name: Run implement terraform
         run: |
