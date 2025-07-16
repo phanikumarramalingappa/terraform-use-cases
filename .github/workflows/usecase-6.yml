@@ -81,19 +81,25 @@ jobs:
          name: checkov-info
          path: checkov_result.json
 
-      - name: Terraform Doc
-        uses: terraform-docs/gh-actions@main
-        with: 
-          working-dir: .
-          output-file: README.md
-          output-method: inject
-          git-push: "true"
-          git-commit-message: "Updated latest terraform document"
-          git-push-user-name: "Github Actions <actions@github.com>"
-          git-push-user-email: "actions@github.com"
+      # - name: Terraform Doc
+      #   uses: terraform-docs/gh-actions@main
+      #   with: 
+      #     working-dir: .
+      #     output-file: README.md
+      #     output-method: inject
+      #     git-push: "true"
+      #     git-commit-message: "Updated latest terraform document"
+      #     git-push-user-name: "Github Actions <actions@github.com>"
+      #     git-push-user-email: "actions@github.com"
     
-      - name: Run terraform docs
-        run: terraform-docs markdown .
+      - name: Istall and Run terraform docs
+        run: |
+          curl -sSLo terraform-docs.tar.gz https://terraform-docs.io/dl/v0.20.0/terraform-docs-v0.20.0-linux-amd64.tar.gz
+          tar -xzf terraform-docs.tar.gz
+          chmod +x terraform-docs
+          sudo mv terraform-docs /usr/local/bin/
+          terraform-docs --version
+          terraform-docs markdown .
          
       - name: Run implement terraform
         run: |
