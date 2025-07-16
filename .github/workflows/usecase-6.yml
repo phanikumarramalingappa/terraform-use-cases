@@ -84,12 +84,16 @@ jobs:
       - name: Terraform Doc
         uses: terraform-docs/gh-actions@1.4.1
         with: 
+          working-dir: usecase-6
           output-file: README.md
           output-method: inject
           git-push: "true"
           git-commit-message: "Updated latest terraform document"
           git-push-user-name: "Github Actions <actions@github.com>"
           git-push-user-email: "actions@github.com"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+        continue-on-error: true
     
       # - name: Istall and Run terraform docs
       #   run: |
