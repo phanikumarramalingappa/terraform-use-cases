@@ -6,11 +6,7 @@ deny[msg] {
         
     expr := resource.change.after.schedule_expression
 
-    re_match("rate\\(\\s*[1-9]\\s+minutes[s]?\\s*\\)", expr)
+    re_match("rate\\(\\s*[1-9]1[04]\\s+minutes[s]?\\s*\\)", expr)
 
     msg := sprintf("Too Frequent Schedule")
-}
-
-valid_schedule(expr) = true {
-    not 
 }
