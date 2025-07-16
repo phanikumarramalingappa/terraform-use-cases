@@ -1,4 +1,4 @@
-name: Terraform Github Use Case - 6
+name: Terraform Github Use Case - 6 PR
 
 # on:
 #   push:
@@ -19,7 +19,7 @@ permissions:
   contents: write
 
 jobs:
-  terraform-uc5:
+  terraform-uc6:
     runs-on: ubuntu-latest
 
     defaults:
@@ -106,15 +106,15 @@ jobs:
         uses: actions/upload-artifact@v4.6.2
         with:
           name: terraform-docs
-          run: usecase/README.md
+          path: usecase-6/README.md
           
       - name: Add README.md
         uses: peter-evans/create-pull-request@v7.0.8
         with:
           token: ${{ secrets.GIT_TOKEN }}
-          issue-number: ${{ github.event.pull_request.number }}
           body: |
             ## Terraform Docs ##
+            ```
             ${{ steps.readme.outputs.content }}
 
       - name: Run implement terraform
