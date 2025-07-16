@@ -19,7 +19,7 @@ permissions:
   contents: write
 
 jobs:
-  terraform-uc6:
+  terraform-uc5:
     runs-on: ubuntu-latest
 
     defaults:
@@ -106,7 +106,7 @@ jobs:
         uses: actions/upload-artifact@v4.6.2
         with:
           name: terraform-docs
-          run: usecase-6/README.md
+          run: usecase/README.md
           
       - name: Add README.md
         uses: peter-evans/create-pull-request@v7.0.8
