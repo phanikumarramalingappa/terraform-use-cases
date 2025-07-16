@@ -112,10 +112,8 @@ jobs:
         uses: peter-evans/create-pull-request@v7.0.8
         with:
           token: ${{ secrets.GIT_TOKEN }}
-          issue-number: ${{ github.event.pull_request.number }}
           body: |
             ## Terraform Docs ##
-            ${{ steps.readme.outputs.content }}
 
       - name: Run implement terraform
         run: |
