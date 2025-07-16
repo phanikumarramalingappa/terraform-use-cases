@@ -116,6 +116,44 @@
                             "module_connection": false
                         }
                     ],
+                    "role": [
+                        {
+                            "type": "module",
+                            "name": "lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_function",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.stop_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "start_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "stop_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        }
+                    ],
                     "environment.variables.instance_id": [
                         {
                             "type": "module",
@@ -158,44 +196,6 @@
                             "module_connection": false
                         }
                     ],
-                    "role": [
-                        {
-                            "type": "module",
-                            "name": "lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_function",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "start_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "stop_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        }
-                    ],
                     "function_name": [
                         {
                             "type": "module",
@@ -211,13 +211,13 @@
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
+                            "name": "aws_lambda_function.stop_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
+                            "name": "aws_lambda_function.start_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
@@ -359,6 +359,44 @@
                             "module_connection": false
                         }
                     ],
+                    "role": [
+                        {
+                            "type": "module",
+                            "name": "lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_function",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.stop_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "start_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "stop_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        }
+                    ],
                     "environment.variables.instance_id": [
                         {
                             "type": "module",
@@ -401,44 +439,6 @@
                             "module_connection": false
                         }
                     ],
-                    "role": [
-                        {
-                            "type": "module",
-                            "name": "lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_function",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "start_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "stop_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        }
-                    ],
                     "function_name": [
                         {
                             "type": "module",
@@ -454,13 +454,13 @@
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
+                            "name": "aws_lambda_function.stop_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
+                            "name": "aws_lambda_function.start_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
@@ -617,13 +617,51 @@
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
+                            "name": "aws_lambda_function.stop_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
                         {
                             "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "start_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "stop_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "function_name": [
+                        {
+                            "type": "module",
+                            "name": "lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_function",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
                             "name": "aws_lambda_function.stop_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
@@ -679,44 +717,6 @@
                             "type": "variable",
                             "name": "instance_id",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        }
-                    ],
-                    "function_name": [
-                        {
-                            "type": "module",
-                            "name": "lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_function",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "start_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "stop_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
                             "module_connection": false
                         }
                     ],
@@ -860,13 +860,51 @@
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
+                            "name": "aws_lambda_function.stop_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
                         {
                             "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "start_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "stop_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "function_name": [
+                        {
+                            "type": "module",
+                            "name": "lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_function",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
                             "name": "aws_lambda_function.stop_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
@@ -922,44 +960,6 @@
                             "type": "variable",
                             "name": "instance_id",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        }
-                    ],
-                    "function_name": [
-                        {
-                            "type": "module",
-                            "name": "lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_function",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "start_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "stop_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
                             "module_connection": false
                         }
                     ],
@@ -1073,9 +1073,9 @@
                         }
                     },
                     "evaluated_keys": [
-                        "cors/allow_origins",
                         "resource_type",
-                        "cors/allow_methods"
+                        "cors/allow_methods",
+                        "cors/allow_origins"
                     ]
                 },
                 "code_block": [
@@ -1179,6 +1179,44 @@
                             "module_connection": false
                         }
                     ],
+                    "role": [
+                        {
+                            "type": "module",
+                            "name": "lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_function",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.stop_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "start_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "stop_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        }
+                    ],
                     "environment.variables.instance_id": [
                         {
                             "type": "module",
@@ -1221,44 +1259,6 @@
                             "module_connection": false
                         }
                     ],
-                    "role": [
-                        {
-                            "type": "module",
-                            "name": "lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_function",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "start_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "stop_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        }
-                    ],
                     "function_name": [
                         {
                             "type": "module",
@@ -1274,13 +1274,13 @@
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
+                            "name": "aws_lambda_function.stop_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
+                            "name": "aws_lambda_function.start_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
@@ -1358,9 +1358,9 @@
                         }
                     },
                     "evaluated_keys": [
-                        "cors/allow_origins",
                         "resource_type",
-                        "cors/allow_methods"
+                        "cors/allow_methods",
+                        "cors/allow_origins"
                     ]
                 },
                 "code_block": [
@@ -1479,13 +1479,51 @@
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
+                            "name": "aws_lambda_function.stop_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
                         {
                             "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "start_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "stop_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "function_name": [
+                        {
+                            "type": "module",
+                            "name": "lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_function",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
                             "name": "aws_lambda_function.stop_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
@@ -1541,44 +1579,6 @@
                             "type": "variable",
                             "name": "instance_id",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        }
-                    ],
-                    "function_name": [
-                        {
-                            "type": "module",
-                            "name": "lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_function",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "start_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "stop_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
                             "module_connection": false
                         }
                     ],
@@ -1713,7 +1713,7 @@
                 "check_len": null,
                 "definition_context_file_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/event/main.tf",
                 "breadcrumbs": {
-                    "description": [
+                    "target.arn": [
                         {
                             "type": "module",
                             "name": "start_ec2_schedule",
@@ -1722,7 +1722,7 @@
                         },
                         {
                             "type": "variable",
-                            "name": "description",
+                            "name": "lambda_arn",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/event/variable.tf",
                             "module_connection": false
                         }
@@ -1755,20 +1755,6 @@
                             "module_connection": false
                         }
                     ],
-                    "target.arn": [
-                        {
-                            "type": "module",
-                            "name": "start_ec2_schedule",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_arn",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/event/variable.tf",
-                            "module_connection": false
-                        }
-                    ],
                     "schedule_expression": [
                         {
                             "type": "module",
@@ -1779,6 +1765,20 @@
                         {
                             "type": "variable",
                             "name": "schedule_expression",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/event/variable.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "description": [
+                        {
+                            "type": "module",
+                            "name": "start_ec2_schedule",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "description",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/event/variable.tf",
                             "module_connection": false
                         }
@@ -1912,7 +1912,7 @@
                 "check_len": null,
                 "definition_context_file_path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/event/main.tf",
                 "breadcrumbs": {
-                    "target.arn": [
+                    "target.role_arn": [
                         {
                             "type": "module",
                             "name": "stop_ec2_schedule",
@@ -1921,7 +1921,7 @@
                         },
                         {
                             "type": "variable",
-                            "name": "lambda_arn",
+                            "name": "scheduler_role_arn",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/event/variable.tf",
                             "module_connection": false
                         }
@@ -1940,6 +1940,20 @@
                             "module_connection": false
                         }
                     ],
+                    "target.arn": [
+                        {
+                            "type": "module",
+                            "name": "stop_ec2_schedule",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_arn",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/event/variable.tf",
+                            "module_connection": false
+                        }
+                    ],
                     "schedule_expression": [
                         {
                             "type": "module",
@@ -1950,20 +1964,6 @@
                         {
                             "type": "variable",
                             "name": "schedule_expression",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/event/variable.tf",
-                            "module_connection": false
-                        }
-                    ],
-                    "target.role_arn": [
-                        {
-                            "type": "module",
-                            "name": "stop_ec2_schedule",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "scheduler_role_arn",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/event/variable.tf",
                             "module_connection": false
                         }
@@ -2107,6 +2107,44 @@
                             "module_connection": false
                         }
                     ],
+                    "role": [
+                        {
+                            "type": "module",
+                            "name": "lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_function",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.stop_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "start_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "stop_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        }
+                    ],
                     "environment.variables.instance_id": [
                         {
                             "type": "module",
@@ -2149,44 +2187,6 @@
                             "module_connection": false
                         }
                     ],
-                    "role": [
-                        {
-                            "type": "module",
-                            "name": "lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_function",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "start_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "stop_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        }
-                    ],
                     "function_name": [
                         {
                             "type": "module",
@@ -2202,13 +2202,13 @@
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
+                            "name": "aws_lambda_function.stop_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
+                            "name": "aws_lambda_function.start_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
@@ -2350,6 +2350,44 @@
                             "module_connection": false
                         }
                     ],
+                    "role": [
+                        {
+                            "type": "module",
+                            "name": "lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_function",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.stop_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "start_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "stop_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        }
+                    ],
                     "environment.variables.instance_id": [
                         {
                             "type": "module",
@@ -2392,44 +2430,6 @@
                             "module_connection": false
                         }
                     ],
-                    "role": [
-                        {
-                            "type": "module",
-                            "name": "lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_function",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "start_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "stop_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        }
-                    ],
                     "function_name": [
                         {
                             "type": "module",
@@ -2445,13 +2445,13 @@
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
+                            "name": "aws_lambda_function.stop_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
+                            "name": "aws_lambda_function.start_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
@@ -2593,6 +2593,44 @@
                             "module_connection": false
                         }
                     ],
+                    "role": [
+                        {
+                            "type": "module",
+                            "name": "lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_function",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.stop_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "start_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "stop_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        }
+                    ],
                     "environment.variables.instance_id": [
                         {
                             "type": "module",
@@ -2635,44 +2673,6 @@
                             "module_connection": false
                         }
                     ],
-                    "role": [
-                        {
-                            "type": "module",
-                            "name": "lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_function",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "start_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "stop_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        }
-                    ],
                     "function_name": [
                         {
                             "type": "module",
@@ -2688,13 +2688,13 @@
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
+                            "name": "aws_lambda_function.stop_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
+                            "name": "aws_lambda_function.start_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
@@ -2836,6 +2836,44 @@
                             "module_connection": false
                         }
                     ],
+                    "role": [
+                        {
+                            "type": "module",
+                            "name": "lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_function",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.stop_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "start_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "stop_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        }
+                    ],
                     "environment.variables.instance_id": [
                         {
                             "type": "module",
@@ -2878,44 +2916,6 @@
                             "module_connection": false
                         }
                     ],
-                    "role": [
-                        {
-                            "type": "module",
-                            "name": "lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_function",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "start_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "stop_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        }
-                    ],
                     "function_name": [
                         {
                             "type": "module",
@@ -2931,13 +2931,13 @@
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
+                            "name": "aws_lambda_function.stop_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
+                            "name": "aws_lambda_function.start_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
@@ -3079,6 +3079,44 @@
                             "module_connection": false
                         }
                     ],
+                    "role": [
+                        {
+                            "type": "module",
+                            "name": "lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_function",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.stop_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "start_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "stop_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        }
+                    ],
                     "environment.variables.instance_id": [
                         {
                             "type": "module",
@@ -3121,44 +3159,6 @@
                             "module_connection": false
                         }
                     ],
-                    "role": [
-                        {
-                            "type": "module",
-                            "name": "lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_function",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "start_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "stop_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        }
-                    ],
                     "function_name": [
                         {
                             "type": "module",
@@ -3174,13 +3174,13 @@
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
+                            "name": "aws_lambda_function.stop_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
+                            "name": "aws_lambda_function.start_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
@@ -3322,6 +3322,44 @@
                             "module_connection": false
                         }
                     ],
+                    "role": [
+                        {
+                            "type": "module",
+                            "name": "lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_function",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.stop_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "start_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "stop_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        }
+                    ],
                     "environment.variables.instance_id": [
                         {
                             "type": "module",
@@ -3364,44 +3402,6 @@
                             "module_connection": false
                         }
                     ],
-                    "role": [
-                        {
-                            "type": "module",
-                            "name": "lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_function",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "start_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "stop_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        }
-                    ],
                     "function_name": [
                         {
                             "type": "module",
@@ -3417,13 +3417,13 @@
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
+                            "name": "aws_lambda_function.stop_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
+                            "name": "aws_lambda_function.start_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
@@ -3580,13 +3580,51 @@
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
+                            "name": "aws_lambda_function.stop_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
                         {
                             "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "start_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "stop_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "function_name": [
+                        {
+                            "type": "module",
+                            "name": "lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_function",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
                             "name": "aws_lambda_function.stop_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
@@ -3642,44 +3680,6 @@
                             "type": "variable",
                             "name": "instance_id",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        }
-                    ],
-                    "function_name": [
-                        {
-                            "type": "module",
-                            "name": "lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_function",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "start_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "stop_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
                             "module_connection": false
                         }
                     ],
@@ -3823,13 +3823,51 @@
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
+                            "name": "aws_lambda_function.stop_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
                         {
                             "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "start_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "stop_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "function_name": [
+                        {
+                            "type": "module",
+                            "name": "lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_function",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
                             "name": "aws_lambda_function.stop_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
@@ -3885,44 +3923,6 @@
                             "type": "variable",
                             "name": "instance_id",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        }
-                    ],
-                    "function_name": [
-                        {
-                            "type": "module",
-                            "name": "lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_function",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "start_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "stop_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
                             "module_connection": false
                         }
                     ],
@@ -4066,13 +4066,51 @@
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
+                            "name": "aws_lambda_function.stop_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
                         {
                             "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "start_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "stop_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "function_name": [
+                        {
+                            "type": "module",
+                            "name": "lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_function",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
                             "name": "aws_lambda_function.stop_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
@@ -4128,44 +4166,6 @@
                             "type": "variable",
                             "name": "instance_id",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        }
-                    ],
-                    "function_name": [
-                        {
-                            "type": "module",
-                            "name": "lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_function",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "start_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "stop_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
                             "module_connection": false
                         }
                     ],
@@ -4309,13 +4309,51 @@
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
+                            "name": "aws_lambda_function.stop_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
                         {
                             "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "start_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "stop_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "function_name": [
+                        {
+                            "type": "module",
+                            "name": "lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_function",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
                             "name": "aws_lambda_function.stop_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
@@ -4371,44 +4409,6 @@
                             "type": "variable",
                             "name": "instance_id",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        }
-                    ],
-                    "function_name": [
-                        {
-                            "type": "module",
-                            "name": "lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_function",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "start_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "stop_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
                             "module_connection": false
                         }
                     ],
@@ -4552,13 +4552,51 @@
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
+                            "name": "aws_lambda_function.stop_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
                         {
                             "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "start_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "stop_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "function_name": [
+                        {
+                            "type": "module",
+                            "name": "lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_function",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
                             "name": "aws_lambda_function.stop_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
@@ -4614,44 +4652,6 @@
                             "type": "variable",
                             "name": "instance_id",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        }
-                    ],
-                    "function_name": [
-                        {
-                            "type": "module",
-                            "name": "lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_function",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "start_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "stop_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
                             "module_connection": false
                         }
                     ],
@@ -4795,13 +4795,51 @@
                         },
                         {
                             "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
+                            "name": "aws_lambda_function.stop_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
                         {
                             "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "start_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "output",
+                            "name": "stop_lambda_function_name",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
+                            "module_connection": false
+                        }
+                    ],
+                    "function_name": [
+                        {
+                            "type": "module",
+                            "name": "lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "variable",
+                            "name": "lambda_function",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
                             "name": "aws_lambda_function.stop_lambda",
+                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
+                            "module_connection": false
+                        },
+                        {
+                            "type": "resource",
+                            "name": "aws_lambda_function.start_lambda",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
                             "module_connection": false
                         },
@@ -4857,44 +4895,6 @@
                             "type": "variable",
                             "name": "instance_id",
                             "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        }
-                    ],
-                    "function_name": [
-                        {
-                            "type": "module",
-                            "name": "lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "variable",
-                            "name": "lambda_function",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/variable.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.start_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "resource",
-                            "name": "aws_lambda_function.stop_lambda",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/main.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "start_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
-                            "module_connection": false
-                        },
-                        {
-                            "type": "output",
-                            "name": "stop_lambda_function_name",
-                            "path": "/home/runner/work/terraform-uc/terraform-uc/usecase-6/modules/lambda/output.tf",
                             "module_connection": false
                         }
                     ],
