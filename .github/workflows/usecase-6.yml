@@ -1,18 +1,18 @@
 name: Terraform Github Use Case - 6 PR
 
-# on:
-#   push:
-#     paths:
-#       - 'usecase-6/**'
-#       - '.github/workflows/usecase-6.yml'
-#     branches: main
-
 on:
-  pull_request:
+  push:
     paths:
       - 'usecase-6/**'
       - '.github/workflows/usecase-6.yml'
-    types: [opened, synchronize]
+    branches: main
+
+# on:
+#   pull_request:
+#     paths:
+#       - 'usecase-6/**'
+#       - '.github/workflows/usecase-6.yml'
+#     types: [opened, synchronize]
   
 permissions:
   id-token: write
