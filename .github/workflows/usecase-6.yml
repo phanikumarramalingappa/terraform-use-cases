@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v4.2.2
 
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v2.0.3
+        uses: hashicorp/setup-terraform@v3
 
       - name: SetUp AWS
         uses: aws-actions/configure-aws-credentials@v4.1.0
