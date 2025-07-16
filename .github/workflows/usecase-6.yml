@@ -91,6 +91,8 @@ jobs:
           git-commit-message: "Updated latest terraform document"
           git-push-user-name: "Github Actions <actions@github.com>"
           git-push-user-email: "actions@github.com"
+    
+      - name: Run terraform docs
         run: terraform-docs markdown .
          
       - name: Run implement terraform
