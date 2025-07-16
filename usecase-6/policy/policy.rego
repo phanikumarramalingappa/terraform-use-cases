@@ -8,5 +8,5 @@ deny[msg] {
 }
 
 valid_schedule(expr) = true {
-    re_match("rate\\(\\s*[1-9]\\s+minutes[s]?\\s*\\)", expr)
+    not re_match("rate\\(\\s*[1-9]\\s+minutes[s]?\\s*\\)", expr)
 }
