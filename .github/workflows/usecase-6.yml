@@ -98,6 +98,7 @@ jobs:
           tar -xzf terraform-docs.tar.gz
           chmod +x terraform-docs
           sudo mv terraform-docs /usr/local/bin/
+          pwd
           terraform-docs --version
           terraform-docs markdown . > README.md
          
