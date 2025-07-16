@@ -82,7 +82,7 @@ jobs:
          path: checkov_result.json
 
       - name: Terraform Doc
-        uses: terraform-docs/gh-actions@1.4.1
+        uses: terraform-docs/gh-actions@v1.4.1
         with: 
           working-dir: usecase-6
           output-file: README.md
