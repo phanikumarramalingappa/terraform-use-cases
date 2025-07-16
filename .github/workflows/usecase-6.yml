@@ -100,6 +100,7 @@ jobs:
           sudo mv terraform-docs /usr/local/bin/
           pwd
           terraform-docs --version
+          touch README.md
           terraform-docs markdown . | tee README.md
 
       - name: Run implement terraform
