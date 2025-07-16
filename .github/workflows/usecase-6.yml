@@ -47,6 +47,7 @@ jobs:
           terraform init
           terraform plan -out tfplan.binary
           terraform show -json tfplan.binary > tfplan.json
+          cat tfplan.json | jq .
           conftest test tfplan.json -p policy
 
       # - name: Setup TFLint
