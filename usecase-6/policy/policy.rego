@@ -1,11 +1,8 @@
 package main
 
+# Deny overly frequent event schedules
 deny[msg] {
-    some i
-    resource := input.resource_changes[i]
-    resource.type == "aws_scheduler_schedule"
-    expr := resource.change.after.schedule_expression
-    re_match("rate\\(\\s*[1-9][1-4]\\s+minutes[s]?\\s*\\)", expr)
-    msg := "Too Frequent Schedule"
-
+  input.resource_type == "aws_scheduler_schedule"
+  re_match("rate\\(\\s*[1-9][1-4]\\s+minutes[s]?\\s*\\)", input.config.schedule_expression)
+  msg = sprintf("Event '%s' has a schedule that is too frequent: %s", [input.name, input.config.schedule_expression])
 }
