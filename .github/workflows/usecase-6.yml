@@ -107,7 +107,7 @@ jobs:
           commit-message: "docs: update Terraform module documentation"
           title: "Update Terraform Docs"
           body: |
-            ## Terraform Documentation Update
+            ## Terraform Documentation Updates
             This PR includes the latest auto-generated documentation for the Terraform module in `usecase-6`.
 
           branch: terraform-docs-update
