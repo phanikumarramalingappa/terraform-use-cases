@@ -1,0 +1,80 @@
+import os
+
+# Define the combined GitHub Actions workflow content
+workflow_content = """name: Deploy Infrastructure and Lambda
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'terraform/**'
+      - 'microservices/**'
+      - '.github/workflows/**'
+
+env:
+  AWS_REGION: us-east-1
+  ECR_REPOSITORY: hello-world
+  LAMBDA_FUNCTION_NAME: hello-world-lambda
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      # Terraform Init, Plan, Apply
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+
+      - name: Terraform Init
+        working-directory: terraform
+        run: terraform init
+
+      - name: Terraform Plan
+        working-directory: terraform
+        run: terraform plan
+
+      - name: Terraform Apply
+        working-directory: terraform
+        run: terraform apply -auto-approve
+
+      # Docker Build and Push
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Build Docker image
+        run: |
+          docker build -t $ECR_REPOSITORY ./microservices/hello-world
+          docker tag $ECR_REPOSITORY:latest ${{ steps.login-ecr.outputs.registry }}/$ECR_REPOSITORY:latest
+
+      - name: Push Docker image to ECR
+        run: |
+          docker push ${{ steps.login-ecr.outputs.registry }}/$ECR_REPOSITORY:latest
+
+      # Update Lambda Function
+      - name: Update Lambda function with new image
+        run: |
+          aws lambda update-function-code \\
+            --function-name $LAMBDA_FUNCTION_NAME \\
+            --image-uri ${{ steps.login-ecr.outputs.registry }}/$ECR_REPOSITORY:latest
+"""
+
+# Create the directory if it doesn't exist
+os.makedirs(".github/workflows", exist_ok=True)
+
+# Save the workflow content to the specified file
+with open(".github/workflows/deploy.yml", "w") as f:
+    f.write(workflow_content)
+
+print("Combined GitHub Actions workflow has been saved to .github/workflows/deploy.yml")
