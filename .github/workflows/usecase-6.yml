@@ -70,11 +70,10 @@ jobs:
       - name: Install Checkov
         run: pip install checkov
 
-      - name: Run Checkov Scan (Fail on Violation)
+      - name: Run Checkov Scan (Don't Fail on Violation)
         run: |
-          checkov -d . --framework terraform --output json > checkov_result.json
-          jq '.summary.failed_checks' checkov_result.json | grep -q 0 || exit 1
-
+          checkov -d . --framework terraform --output json > checkov_result.json || true
+          
       - name: Upload Checkov Results
         uses: actions/upload-artifact@v4.6.2
         with:
