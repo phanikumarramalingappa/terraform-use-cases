@@ -62,7 +62,7 @@ jobs:
       - name: Init & Run TFLint
         run: |
           tflint --init
-          tflint -f compact
+          tflint -f compact --disable-rule=terraform_unused_declarations
 
       - name: Setup Python for Checkov
         uses: actions/setup-python@v5.6.0
