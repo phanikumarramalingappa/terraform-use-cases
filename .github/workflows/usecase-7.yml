@@ -1,16 +1,11 @@
-import os
-
-# Define the combined GitHub Actions workflow content
-workflow_content = """name: Deploy Infrastructure and Lambda
-
+name: Deploy Infrastructure and Lambda
 on:
   push:
     branches:
       - main
     paths:
-      - 'terraform/**'
-      - 'microservices/**'
-      - '.github/workflows/**'
+      - 'usecase7-AWS-Lambda-Container-Deployment-api-gateway/**'
+      - '.github/workflows/usecase-7.yml'
 
 env:
   AWS_REGION: us-east-1
@@ -68,13 +63,3 @@ jobs:
           aws lambda update-function-code \\
             --function-name $LAMBDA_FUNCTION_NAME \\
             --image-uri ${{ steps.login-ecr.outputs.registry }}/$ECR_REPOSITORY:latest
-"""
-
-# Create the directory if it doesn't exist
-os.makedirs(".github/workflows", exist_ok=True)
-
-# Save the workflow content to the specified file
-with open(".github/workflows/deploy.yml", "w") as f:
-    f.write(workflow_content)
-
-print("Combined GitHub Actions workflow has been saved to .github/workflows/deploy.yml")
