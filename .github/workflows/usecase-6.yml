@@ -88,8 +88,8 @@ jobs:
           output-method: inject
           git-push: "true"
           git-commit-message: "Updated latest terraform document"
-          git-push-user-name: "Github Actions <actions@github.com>"
-          git-push-user-email: "actions@github.com"
+          git-push-user-name: "phanikumarramalingappa"
+          git-push-user-email: "phaniramalingappa@gmail.com"
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
         continue-on-error: true
