@@ -31,7 +31,7 @@ variable "lambda_function_name" {
 variable "repo_name" {
   description = "ECR repository name"
   type        = string
-  default     = "test"
+  default     = "test2"
 }
 
 variable "lambda_image_uri" {
