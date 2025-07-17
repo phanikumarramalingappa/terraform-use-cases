@@ -8,6 +8,10 @@ on:
       - 'usecase7-AWS-Lambda-Container-Deployment-api-gateway/**'
       - '.github/workflows/usecase-7.yml'
 
+permissions:
+  id-token: write
+  contents: read
+
 env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: hello-world
