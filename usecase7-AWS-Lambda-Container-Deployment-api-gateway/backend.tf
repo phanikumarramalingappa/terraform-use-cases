@@ -1,10 +1,9 @@
 terraform {
+  required_version = ">=1.0.0"
   backend "s3" {
-    bucket         = "terraform-state-dev"
-    key            = "lambda-container/terraform.tfstate"
-    region         = "us-east-1"
-    dynamodb_table = "terraform-locks"
-    encrypt        = true
-    workspace_key_prefix = "env"
+    bucket       = "terraform-usecases-nsh-batch6"
+    key          = "usecase6/terraform.tfstate"
+    region       = "ap-southeast-2"
+    use_lockfile = true
   }
 }
