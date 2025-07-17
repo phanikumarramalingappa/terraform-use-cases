@@ -3,7 +3,7 @@ terraform {
   backend "s3" {
     bucket       = "terraform-usecases-nsh-batch6"
     key          = "usecase6/terraform.tfstate"
-    region       = "eu-west-1"
+    region       = "us-east-1"
     use_lockfile = true
   }
 }
