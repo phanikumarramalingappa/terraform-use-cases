@@ -37,5 +37,5 @@ variable "repo_name" {
 variable "lambda_image_uri" {
   description = "ECR repository URL"
   type        = string
-  default     = "975049998898.dkr.ecr.us-east-1.amazonaws.com/test:latest"
+  default     = "911891700576.dkr.ecr.us-east-1.amazonaws.com/hello-world:latest"
 }
