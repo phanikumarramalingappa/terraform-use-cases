@@ -29,7 +29,13 @@ resource "aws_iam_role_policy" "lambda_ecr_image_access" {
         Action = [
           "ecr:GetDownloadUrlForLayer",
           "ecr:BatchGetImage",
-          "ecr:BatchCheckLayerAvailability",
+          "ecr:BatchCheckLayerAvailability"
+        ],
+        Resource = "arn:aws:ecr:<region>:<account_id>:repository/<your-repo-name>"
+      },
+      {
+        Effect = "Allow",
+        Action = [
           "ecr:GetAuthorizationToken"
         ],
         Resource = "*"
