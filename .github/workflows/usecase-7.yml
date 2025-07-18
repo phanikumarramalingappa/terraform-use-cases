@@ -1,4 +1,4 @@
-name: Deploy Infrastructure and Lambda
+name: Deploy Infrastructure and Lambda with GH
 
 on:
   push:
