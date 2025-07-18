@@ -1,17 +1,18 @@
+
 resource "aws_api_gateway_rest_api" "rest_api" {
   name        = "rest-api"
   description = "REST API for Lambda integration"
 }
 
-resource "aws_api_gateway_resource" "hello" {
-  rest_api_id = aws_api_gateway_rest_api.this.id
-  parent_id   = aws_api_gateway_rest_api.this.root_resource_id
-  path_part   = "hello"
+resource "aws_api_gateway_resource" "proxy" {
+  rest_api_id = aws_api_gateway_rest_api.rest_api.id
+  parent_id   = aws_api_gateway_rest_api.rest_api.root_resource_id
+  path_part   = "{proxy+}"
 }
 
-resource "aws_api_gateway_method" "any" {
-  rest_api_id   = aws_api_gateway_rest_api.this.id
-  resource_id   = aws_api_gateway_resource.hello.id
+resource "aws_api_gateway_method" "proxy_method" {
+  rest_api_id   = aws_api_gateway_rest_api.rest_api.id
+  resource_id   = aws_api_gateway_resource.proxy.id
   http_method   = "ANY"
   authorization = "NONE"
 }
