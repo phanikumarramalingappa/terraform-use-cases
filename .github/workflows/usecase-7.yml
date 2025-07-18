@@ -31,7 +31,21 @@ jobs:
           aws-region: ${{ env.AWS_REGION }}
           role-to-assume: ${{ secrets.OIDC_ROLE }}
 
-      # Terraform Init, Plan, Apply
+      # Docker Build and Push (before Terraform)
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Build Docker image
+        run: |
+          docker build -t ${{ env.ECR_REPOSITORY }} usecase7-AWS-Lambda-Container-Deployment-api-gateway/docker
+          docker tag ${{ env.ECR_REPOSITORY }}:latest ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:latest
+
+      - name: Push Docker image to ECR
+        run: |
+          docker push ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:latest
+
+      # Terraform Init, Plan, Apply (after image is available)
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
 
@@ -46,24 +60,3 @@ jobs:
       - name: Terraform Apply
         working-directory: usecase7-AWS-Lambda-Container-Deployment-api-gateway
         run: terraform apply -auto-approve
-
-      # Docker Build and Push
-      - name: Login to Amazon ECR
-        id: login-ecr
-        uses: aws-actions/amazon-ecr-login@v1
-
-      - name: Build Docker image
-        run: |
-          docker build -t ${{ env.ECR_REPOSITORY }} usecase7-AWS-Lambda-Container-Deployment-api-gateway/docker
-          docker tag ${{ env.ECR_REPOSITORY }}:latest ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:latest
-
-      - name: Push Docker image to ECR
-        run: |
-          docker push ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:latest
-
-      # Update Lambda Function
-      - name: Update Lambda function with new image
-        run: |
-          aws lambda update-function-code \
-            --function-name ${{ env.LAMBDA_FUNCTION_NAME }} \
-            --image-uri ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:latest
