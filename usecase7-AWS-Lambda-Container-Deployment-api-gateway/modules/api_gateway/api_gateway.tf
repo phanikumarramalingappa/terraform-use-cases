@@ -26,7 +26,7 @@ resource "aws_api_gateway_integration" "lambda_integration" {
 }
 
 resource "aws_api_gateway_deployment" "rest_deployment" {
-  rest_api_id = aws_api_gateway_rest_api.api.id
+  rest_api_id = aws_api_gateway_rest_api.rest_api.id
   depends_on  = [aws_api_gateway_integration.integration]
 }
 
