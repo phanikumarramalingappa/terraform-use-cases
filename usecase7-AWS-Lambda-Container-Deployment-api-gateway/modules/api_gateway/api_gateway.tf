@@ -27,12 +27,12 @@ resource "aws_api_gateway_integration" "lambda_integration" {
 
 resource "aws_api_gateway_deployment" "rest_deployment" {
   rest_api_id = aws_api_gateway_rest_api.rest_api.id
-  depends_on  = [aws_api_gateway_integration.integration]
+  depends_on  = [aws_api_gateway_integration.lambda_integration]
 }
 
 resource "aws_api_gateway_stage" "api_stage" {
   stage_name    = var.stage_name
-  rest_api_id   = aws_api_gateway_rest_api.api.id
+  rest_api_id   = aws_api_gateway_rest_api.rest_api.id
   deployment_id = aws_api_gateway_deployment.rest_deployment.id
 }
 
@@ -45,5 +45,5 @@ resource "aws_lambda_permission" "api_gw" {
 }
 
 output "api_endpoint" {
-  value = "${aws_api_gateway_deployment.rest_deployment.invoke_url}"
+  value = "https://${aws_api_gateway_rest_api.rest_api.id}.execute-api.${var.region}.amazonaws.com/${var.stage_name}/"
 }
