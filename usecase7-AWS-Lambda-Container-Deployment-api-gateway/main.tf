@@ -29,4 +29,5 @@ module "api_gateway" {
   source          = "./modules/api_gateway"
   lambda_function_name = module.lambda.lambda_function_name
   lambda_arn     = module.lambda.lambda_arn
+  stage_name  = "prod"
 }
