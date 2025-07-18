@@ -31,7 +31,7 @@ resource "aws_iam_role_policy" "lambda_ecr_image_access" {
           "ecr:BatchGetImage",
           "ecr:BatchCheckLayerAvailability"
         ],
-        Resource = "arn:aws:ecr:us-east-1:911891700576:repository/hello-world"
+        Resource = var.ecr_repo_arn
       },
       {
         Effect = "Allow",
