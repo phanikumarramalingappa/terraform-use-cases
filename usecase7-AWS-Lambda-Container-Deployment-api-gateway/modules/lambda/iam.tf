@@ -17,11 +17,6 @@ resource "aws_iam_role_policy_attachment" "lambda_basic" {
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
 }
 
-resource "aws_iam_role_policy_attachment" "lambda_vpc_access" {
-  role       = aws_iam_role.lambda_exec.name
-  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
-}
-
 resource "aws_iam_role_policy" "lambda_ecr_image_access" {
   name = "LambdaECRImageAccessPolicy"
   role = aws_iam_role.lambda_exec.id
@@ -34,13 +29,7 @@ resource "aws_iam_role_policy" "lambda_ecr_image_access" {
         Action = [
           "ecr:GetDownloadUrlForLayer",
           "ecr:BatchGetImage",
-          "ecr:BatchCheckLayerAvailability"
-        ],
-        Resource = "*"
-      },
-      {
-        Effect = "Allow",
-        Action = [
+          "ecr:BatchCheckLayerAvailability",
           "ecr:GetAuthorizationToken"
         ],
         Resource = "*"
