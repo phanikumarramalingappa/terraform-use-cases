@@ -7,3 +7,7 @@ variable "lambda_function_name" {
     description = "Name to be used on lambda name"
     type = string
 }
+variable "stage_name" {
+    description = "Name to be used on lambda name"
+    type = string
+}
