@@ -17,3 +17,8 @@ variable "lambda_image_uri" {
     description = "lambda_image_uri"
     type        = string
     }
+
+variable "ecr_repo_arn" {
+  description = "ARN of the ECR repository"
+  type        = string
+}
