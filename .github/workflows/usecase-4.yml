@@ -1,4 +1,4 @@
-name: Terraform Github Use Case 4
+name: Terraform Github Use Case4
 
 on:
   push:
